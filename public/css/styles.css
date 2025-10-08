@@ -248,7 +248,7 @@ body {
                     content: '';
                     position: absolute;
                     inset: 0;
-                    background-image: url('../img/faq-background.jpg');
+                    background-image: url('../img/faq-background.webp');
                     background-size: cover;
                     background-position: top;
                     -webkit-mask-image: url('../img/mask/buy-now-background-mask.webp'); 
@@ -552,7 +552,7 @@ nav.navbar {
             background-image: url('../img/buy-now-background.webp');
         }
         > div > a:last-child > div > div {
-            background-image: url('../img/faq-background.jpg');
+            background-image: url('../img/faq-background.webp');
         }
         > div > a:first-child > div > div, > div > a:last-child > div > div {
             background-size: cover;
@@ -579,7 +579,7 @@ nav.navbar {
         }
 
         #fisico {
-            background-image: url('../img/faq-background.jpg');
+            background-image: url('../img/faq-background.webp');
             filter: grayscale(1);
             border-top: 2px solid #ffffff;
              &:hover {
@@ -943,7 +943,7 @@ nav.navbar {
         content: '';
         position: absolute;
         inset: 0;
-        background-image: url('../img/faq-background.jpg');
+        background-image: url('../img/faq-background.webp');
         background-size: cover;
         -webkit-mask-image: url('../img/mask/buy-now-background-mask.webp'); 
         -webkit-mask-repeat: no-repeat;
