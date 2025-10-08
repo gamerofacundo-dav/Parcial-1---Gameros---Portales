@@ -30,10 +30,13 @@
                         <div class="collapse navbar-collapse " id="navbarNav">
                             <ul class="navbar-nav">
                                 <li class="nav-item">
+                                    <x-nav-link routeto="home" class="text-light">Home</x-nav-link>
+                                </li>
+                                <li class="nav-item">
                                     <x-nav-link routeto="adminJuegos" class="text-light">Juegos</x-nav-link>
                                 </li>
                                 <li class="nav-item">
-                                    <x-nav-link routeto="blogs.blog" class="text-light">Blogs</x-nav-link>
+                                    <x-nav-link routeto="blogs.adminBlogs" class="text-light">Blogs</x-nav-link>
                                 </li>
                             </ul>
                         </div>
@@ -57,7 +60,7 @@
                 </symbol>
             </svg>
             @if(session()->has('feedback.message'))
-                <div class="alert alert-success d-flex align-items-center alerta" role="alert">
+                <div class="alert alert-{{ session()->get('feedback.type', 'success')}} d-flex align-items-center alerta" role="alert">
                     <svg class="bi me-2" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
                     <div>
                         {!! session()->get('feedback.message') !!}

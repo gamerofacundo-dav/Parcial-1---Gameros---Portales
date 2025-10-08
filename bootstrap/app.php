@@ -11,7 +11,13 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware): void {
-        //
+        
+        $middleware->redirectGuestsTo(function(){
+            session()->flash('feedback.message', 'Debe iniciar sesión para acceder a esa sección');
+            session()->flash('feedback.type', 'warning');
+            return route('auth.login.show');
+        });
+
     })
     ->withExceptions(function (Exceptions $exceptions): void {
         //

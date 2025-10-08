@@ -38,11 +38,21 @@
                             <li class="nav-item">
                                 <x-nav-link routeto="games.all" class="text-light">Productos</x-nav-link>
                             </li>
-                            @auth
+                            @guest
                             <li class="nav-item">
                                 <x-nav-link routeto="auth.login.show">Iniciar seisón</x-nav-link>
                             </li>
-                            @endauth
+                            @else
+                            <li class="nav-item">
+                                <x-nav-link routeto="blogs.adminBlogs">Panel de admin</x-nav-link>
+                            </li>
+                            <li class="nav-item">
+                                <form action="{{ route('auth.logout') }}" method="POST">
+                                    @csrf
+                                    <button type="submit" class="nav-link">{{ Auth::user()->name }} (Cerrar sesión)</button>
+                                </form>
+                            </li>
+                            @endguest
                         </ul>
                     </div>
                 </div>
