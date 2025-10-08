@@ -47,7 +47,7 @@ body {
 
         position: relative;
         z-index: 2;
-
+       
     }
     .games, .blogs {
         margin-top: 5rem;
@@ -61,43 +61,32 @@ body {
         border: 1px solid white; 
 
         div {
-            position: absolute;
-            z-index: 1;
-            top: -10px;
-            left: -10px;
             background-color: rgb(255, 255, 255);
             color: black;
             padding: 1rem;
             border-radius: 2rem;
             transition: transform .4s ease-in-out;
+
             &:hover  {
                 transform: translateX(10px);
             }
-
+         
         }
     }
     .games {
         background-image: url('../img/buy-now-background.webp');
         background-image: cover;
         background-position: center;  
-        position: relative;
+      
     }
     .blogs {
         background-image: url('../img/blog/test-blog-3.webp');
         background-image: cover;
         background-position: center;
-        position: relative;
+
     }
 
-    .games::after, .blogs::after {
-        content: '';
-        display: block;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.404);
-        z-index: 0;
-    }
+
 
 
     #section-juegos {
@@ -684,13 +673,17 @@ nav.navbar {
                         font-size: .8rem;
                     }
                 }
+                > div {
+                    height: 350px;
+                    aspect-ratio: 1/1;
+                }
             }
         }
         .bg-dedicado-1 {
             
             height: 350px;
             aspect-ratio: 1/1;
-            background-image: url('../img/blog/test-blog-1jpg.webp');
+            background-image: url('../img/blog/content/bg3-blog1-combate.webp');
             background-size: cover;
             &::after {
                 content: '';
@@ -704,25 +697,11 @@ nav.navbar {
             }
         }
 
-        /* .bg-dedicado::after {
-   
-            content: '';
-            position: absolute;
-            inset: 0;
-            -webkit-mask-image: url('../img/mask/buy-now-background-mask.webp'); 
-            -webkit-mask-repeat: no-repeat;
-            -webkit-mask-size: cover;
-            mask-image: url('../img/mask/buy-now-background-mask.webp');
-            mask-repeat: no-repeat;
-            mask-size: 100% 100%;
-            z-index: 2; 
-          
-        } */
 
         .bg-dedicado-2 {
             height: 350px;
             aspect-ratio: 1/1;
-            background-image: url('../img/blog/test-blog-2jpg.webp');
+            background-image: url('../img/blog/content/bg3-blog2-npcs.webp');
             background-size: cover;
                     &::after {
                 content: '';
@@ -739,7 +718,7 @@ nav.navbar {
         .bg-dedicado-3 {
             height: 350px;
             aspect-ratio: 1/1;
-            background-image: url('../img/blog/test-blog-3.webp');
+            background-image: url('../img/blog/content/bg3-blog3-combate.webp');
             background-size: cover;
                     &::after {
                 content: '';
@@ -756,7 +735,7 @@ nav.navbar {
         .bg-dedicado-4 {
             height: 350px;
             aspect-ratio: 1/1;
-            background-image: url('../img/blog/test-blog-3.webp');
+            background-image: url('../img/blog/content/bg3-blog4-magias.webp');
             background-size: cover;
                     &::after {
                 content: '';
@@ -774,7 +753,7 @@ nav.navbar {
         .bg-dedicado-5 {
             height: 350px;
             aspect-ratio: 1/1;
-            background-image: url('../img/blog/test-blog-2jpg.webp');
+            background-image: url('../img/blog/content/bg3-blog5-ruinas.webp');
             background-size: cover;
                     &::after {
                 content: '';
@@ -805,6 +784,7 @@ nav.navbar {
                 height: 100%;
             }
         }
+      
     }
 
 
@@ -1112,70 +1092,127 @@ nav.navbar {
                         font-size: .8rem;
                     }
                 }
-           
-                .bg-dedicado-1, .bg-dedicado-4 {
-                
+                 > div {
                     height: 450px;
-                    width: 100%;
-                    aspect-ratio: 1/1;
-                    background-image: url('../img/blog/test-blog-1jpg.webp');
-                    background-size: cover;
-                    transition: all .4s ease-in-out;
-                
-                    &::after {
-                        content: '';
-                        display: block;
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        background: linear-gradient(to top, black 40%, rgba(255, 255, 255, 0));
-                        width: 100%;
-                        height: 100%;
-                        
-                    }
-
-                }   
-                .bg-dedicado-2, .bg-dedicado-5 {
-                    height: 450px;
-                    aspect-ratio: 1/1;
-                    width: 100%;
-                    background-image: url('../img/blog/test-blog-2jpg.webp');
-                    background-size: cover;
-                    transition: all .4s ease-in-out;
-                    &::after {
-                        content: '';
-                        display: block;
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        background: linear-gradient(to top, black 40%, rgba(255, 255, 255, 0));
-                        width: 100%;
-                        height: 100%;
-                        transition: all .4s ease-in-out;
-                    }
+                    
                 }
-
-                .bg-dedicado-3, .bg-dedicado-6 {
-                    height: 450px;
-                    aspect-ratio: 1/1;
+           
+            .bg-dedicado-1 {
+            
+             
+                
+                background-image: url('../img/blog/content/bg3-blog1-combate.webp');
+                background-size: cover;
+                transition: all .4s ease-in-out;
+                &::after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                     background: linear-gradient(360deg, black 20%, rgba(255, 255, 255, 0));
                     width: 100%;
-                    background-image: url('../img/blog/test-blog-3.webp');
-                    background-size: cover;
-                    transition: all .4s ease-in-out;
-                    &::after {
-                        content: '';
-                        display: block;
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        background: linear-gradient(to top, black 40%, rgba(255, 255, 255, 0));
-                        width: 100%;
-                        height: 100%;
-                        transition: all .4s ease-in-out;
-                    }
+                    height: 100%;
                 }
             }
+
+
+            .bg-dedicado-2 {
+             
+                
+                background-image: url('../img/blog/content/bg3-blog2-npcs.webp');
+                background-size: cover;
+                transition: all .4s ease-in-out;
+                        &::after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    background: linear-gradient(360deg, black 20%, rgba(255, 255, 255, 0));
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            .bg-dedicado-3 {
+             
+                
+                background-image: url('../img/blog/content/bg3-blog3-combate.webp');
+                background-size: cover;
+                transition: all .4s ease-in-out;
+                        &::after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    background: linear-gradient(360deg, black 20%, rgba(255, 255, 255, 0));
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            .bg-dedicado-4 {
+             
+                
+                background-image: url('../img/blog/content/bg3-blog4-magias.webp');
+                background-size: cover;
+                transition: all .4s ease-in-out;
+                        &::after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    background: linear-gradient(360deg, black 20%, rgba(255, 255, 255, 0));
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+        
+            .bg-dedicado-5 {
+             
+                
+                background-image: url('../img/blog/content/bg3-blog5-ruinas.webp');
+                background-size: cover;
+                transition: all .4s ease-in-out;
+                        &::after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    background: linear-gradient(360deg, black 20%, rgba(255, 255, 255, 0));
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            
+            .bg-dedicado-6 {
+             
+                
+                background-image: url('../img/blog/test-blog-1jpg.webp');
+                background-size: contain;
+                transition: all .4s ease-in-out;
+                        &::after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    background: linear-gradient(360deg, black 20%, rgba(255, 255, 255, 0));
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            }
+           
         }
+       
+
     }
 }
 
@@ -1437,6 +1474,16 @@ footer {
             font-size: 2rem;
             padding-top: 11rem;
         }
+        #section-juegos-crear, #section-blogs-crear {
+            form {
+                width: 100%;
+            }
+        }
+           #section-juegos-edit {
+            form {
+                width: 100%;
+            }
+        }
     }
 }
 
@@ -1501,6 +1548,18 @@ footer {
             }
         }
     }
+    #admin {
+        #section-juegos-crear, #section-blogs-crear {
+            form {
+                width: 100%;
+            }
+        }
+        #section-juegos-edit {
+            form {
+                width: 100%;
+            }
+        }
+    }
    
 }
 
@@ -1556,4 +1615,24 @@ footer {
         }
     }
     
+}
+
+
+
+#iniciar-sesion {
+    height: 90vh;
+    h1 {
+        color: white;
+    }
+    form {
+        width: 300px;
+        background-color: rgba(0, 0, 0, 0.76);
+        border: 1px solid white;
+        padding: 1rem;
+        label {
+            display: block;
+            width: 100%;
+        }
+
+    }
 }

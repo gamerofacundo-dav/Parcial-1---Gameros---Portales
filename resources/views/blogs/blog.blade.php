@@ -16,74 +16,11 @@
                                 <span>{{ $blog->autor }} - {{ $blog->created_at }}</span>
                                 <h3>{{ $blog->titulo }}</h3>
                                 <p>{{ $blog->descripcion }}</p>
-                                <a href="{{ route('blogs.details', ['id' => $blog->blog_id]) }}">Leer más</a>
+                                <a href="{{ route('blogs.details', ['id' => $blog->blog_id]) }}" class="btn-action">Leer más</a>
                                 
                             </div>
                         </article>
                 @endforeach
-                {{-- <article class="bg">
-                    <div class="bg-dedicado"></div>
-                    <div class="contenido">
-                        <h3>Titulo</h3>
-                        <p>Descripcion super corta y resumida</p>
-                        <a>Leer más</a>
-                        <span>Autor - 2025</span>
-                    </div>
-                </article>
-                <article class="bg">
-                    <div class="bg-dedicado2"></div>
-                    <div class="contenido">
-                        <h3>Titulo</h3>
-                        <p>Descripcion super corta y resumida</p>
-                        <a>Leer más</a>
-                        <span>Autor - 2025</span>
-                    </div>
-                </article>
-                <article class="bg">
-                    <div class="bg-dedicado3"></div>
-                    <div class="contenido">
-                        <h3>Titulo</h3>
-                        <p>Descripcion super corta y resumida</p>
-                        <a>Leer más</a>
-                        <span>Autor - 2025</span>
-                    </div>
-                </article>
-                <article class="bg">
-                    <div class="bg-dedicado"></div>
-                    <div class="contenido">
-                        <h3>Titulo</h3>
-                        <p>Descripcion super corta y resumida</p>
-                        <a>Leer más</a>
-                        <span>Autor - 2025</span>
-                    </div>
-                </article>
-                <article class="bg">
-                    <div class="bg-dedicado2"></div>
-                    <div class="contenido">
-                        <h3>Titulo</h3>
-                        <p>Descripcion super corta y resumida</p>
-                        <a>Leer más</a>
-                        <span>Autor - 2025</span>
-                    </div>
-                </article>
-                <article class="bg">
-                    <div class="bg-dedicado3"></div>
-                    <div class="contenido">
-                        <h3>Titulo</h3>
-                        <p>Descripcion super corta y resumida</p>
-                        <a>Leer más</a>
-                        <span>Autor - 2025</span>
-                    </div>
-                </article>
-                <article class="bg">
-                    <div class="bg-dedicado"></div>
-                    <div class="contenido">
-                        <h3>Titulo</h3>
-                        <p>Descripcion super corta y resumida</p>
-                        <a>Leer más</a>
-                        <span>Autor - 2025</span>
-                    </div>
-                </article> --}}
             </div>
         </section>
     </div>
