@@ -20,7 +20,10 @@
         @csrf
         <div class="mb-3">
             <label for="email">Email</label>
-            <input type="email" id="email" name="email" value="{{ old('email') }}">
+            <input type="email" id="email" name="email" value="{{ old('email') }}" class="@error('email') border-red @enderror">
+            @error('email')
+                <div class="text-danger">{{ $message }}</div>
+            @enderror
         </div>
         <div class="mb-3">
             <label for="password">Contraseña</label>

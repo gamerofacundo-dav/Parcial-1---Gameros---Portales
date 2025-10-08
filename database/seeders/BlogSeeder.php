@@ -39,15 +39,24 @@ class BlogSeeder extends Seeder
                                             </p>
                                         </section>
 
-                                        <section>
+                                        <section class="my-5">
+                                        <div class="container">
                                             <h2>Primeros desafíos tácticos</h2>
-                                            <img src="../../../public/img/blog/content/bg3-blog1-combate.webp" alt="Primeros combates en Baldur’s Gate 3">
-                                            <p>
-                                                El jugador debe adaptarse al sistema de combate por turnos desde el inicio, usando hechizos, objetos y el entorno para superar enemigos y acertijos. 
-                                                Las primeras batallas funcionan como <strong>lecciones prácticas</strong> que enseñan a planificar, observar y anticipar cada movimiento. 
-                                                <em>Baldur’s Gate 3</em> recompensa la experimentación: una caja arrojada al enemigo, una trampa activada a tiempo o una pared de fuego pueden marcar la diferencia entre la derrota y la victoria. 
-                                                La tensión de cada enfrentamiento se combina con la narrativa, logrando que cada combate sea parte esencial de la historia y no un simple obstáculo entre diálogos.
-                                            </p>
+                                            <div class="row align-items-center my-4">
+                                                <div class="col-md-8">
+                                                    <p>
+                                                    El jugador debe adaptarse al sistema de combate por turnos desde el inicio, usando hechizos, objetos y el entorno para superar enemigos y acertijos. 
+                                                    Las primeras batallas funcionan como <strong>lecciones prácticas</strong> que enseñan a planificar, observar y anticipar cada movimiento. 
+                                                    <em>Baldur’s Gate 3</em> recompensa la experimentación: una caja arrojada al enemigo, una trampa activada a tiempo o una pared de fuego pueden marcar la diferencia entre la derrota y la victoria. 
+                                                    La tensión de cada enfrentamiento se combina con la narrativa, logrando que cada combate sea parte esencial de la historia y no un simple obstáculo entre diálogos.
+                                                    </p>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <img src="/img/blog/content/bg3-blog1-combate.webp" alt="Primeros combates en Baldur’s Gate 3" class="img-fluid rounded shadow-sm">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        </div>
                                         </section>
                                     </div>
                     ',
@@ -83,15 +92,23 @@ class BlogSeeder extends Seeder
                                             </p>
                                         </section>
 
-                                        <section>
+                                        <section class="my-5">
+                                        <div class="container">
                                             <h2>Interacción con NPCs</h2>
-                                            <img src="../../../public/img/blog/content/bg3-blog2-npcs.jpg" alt="Interacción con NPCs en Baldur’s Gate 3">
-                                            <p>
-                                                El diálogo es clave: las decisiones pueden mejorar o romper relaciones, desbloquear recompensas 
-                                                y alterar la historia. Cada NPC tiene una personalidad marcada, con gestos y voces que reflejan sus emociones. 
-                                                Gracias a las tiradas de dados en las conversaciones, el jugador siente que participa en una 
-                                                <em>verdadera partida de rol</em>, donde incluso una palabra puede cambiar un destino.
-                                            </p>
+                                            <div class="row align-items-center my-4">
+                                                <div class="col-md-8">
+                                                    <p>
+                                                    El diálogo es clave: las decisiones pueden mejorar o romper relaciones, desbloquear recompensas 
+                                                    y alterar la historia. Cada NPC tiene una personalidad marcada, con gestos y voces que reflejan sus emociones. 
+                                                    Gracias a las tiradas de dados en las conversaciones, el jugador siente que participa en una 
+                                                    <em>verdadera partida de rol</em>, donde incluso una palabra puede cambiar un destino.
+                                                    </p>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <img src="/img/blog/content/bg3-blog2-npcs.webp" alt="Interacción con NPCs en Baldur’s Gate 3" class="img-fluid rounded shadow-sm">
+                                                </div>
+                                            </div>
+                                        </div>
                                         </section>
                                     </div>
                     ',
@@ -125,16 +142,24 @@ class BlogSeeder extends Seeder
                                             </p>
                                         </section>
 
-                                        <section>
+                                        <section class="my-5">
+                                        <div class="container">
                                             <h2>Preparación y planificación</h2>
-                                            <img src="../../../public/img/blog/content/bg3-blog3-combate.jpg" alt="Estrategia de combate en Baldur’s Gate 3">
-                                            <p>
-                                                El jugador debe planear ataques, coordinar habilidades del grupo y anticipar acciones enemigas, aumentando la profundidad estratégica. 
-                                                Preparar el terreno antes de un combate puede marcar la diferencia entre una victoria limpia y una derrota total. 
-                                                La gestión de recursos —como hechizos, pociones o puntos de acción— requiere pensar a largo plazo y adaptarse a lo inesperado. 
-                                                <em>Baldur’s Gate 3</em> no perdona la improvisación descuidada: cada turno es una oportunidad para demostrar <strong>astucia</strong>, 
-                                                <strong>paciencia</strong> y conocimiento del sistema de combate más refinado de un RPG moderno.
-                                            </p>
+                                            <div class="row align-items-center my-4">
+                                                <div class="col-md-8">
+                                                    <p>
+                                                    El jugador debe planear ataques, coordinar habilidades del grupo y anticipar acciones enemigas, aumentando la profundidad estratégica. 
+                                                    Preparar el terreno antes de un combate puede marcar la diferencia entre una victoria limpia y una derrota total. 
+                                                    La gestión de recursos —como hechizos, pociones o puntos de acción— requiere pensar a largo plazo y adaptarse a lo inesperado. 
+                                                    <em>Baldur’s Gate 3</em> no perdona la improvisación descuidada: cada turno es una oportunidad para demostrar <strong>astucia</strong>, 
+                                                    <strong>paciencia</strong> y conocimiento del sistema de combate más refinado de un RPG moderno.
+                                                    </p>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <img src="/img/blog/content/bg3-blog3-combate.webp" alt="Estrategia de combate en Baldur’s Gate 3" class="img-fluid rounded shadow-sm">
+                                                </div>
+                                            </div>
+                                        </div>
                                         </section>
                                     </div>
                     ',
@@ -167,15 +192,23 @@ class BlogSeeder extends Seeder
                                             </p>
                                         </section>
 
-                                        <section>
+                                        <section class="my-5">
+                                        <div class="container">
                                             <h2>Rol de los hechizos y habilidades</h2>
-                                            <img src="../../../public/img/blog/content/bg3-blog4-magias.jpg" alt="Hechizos en Baldur’s Gate 3">
-                                            <p>
-                                                Seleccionar las habilidades adecuadas para cada situación es crucial; algunos encuentros requieren ingenio y conocimiento de las reglas de <em>D&D 5e</em>. 
-                                                Cada hechizo tiene su momento perfecto: desde una simple ilusión que evita un enfrentamiento hasta una bola de fuego que cambia el rumbo del combate. 
-                                                Además, las habilidades fuera de combate también influyen en la historia, desbloqueando nuevos caminos, soluciones pacíficas o formas creativas de superar obstáculos. 
-                                                <strong>Baldur’s Gate 3</strong> convierte cada punto de habilidad en una oportunidad para expresar tu estilo de juego y moldear el mundo a tu manera.
-                                            </p>
+                                            <div class="row align-items-center my-4">
+                                                <div class="col-md-8">
+                                                    <p>
+                                                    Seleccionar las habilidades adecuadas para cada situación es crucial; algunos encuentros requieren ingenio y conocimiento de las reglas de <em>D&D 5e</em>. 
+                                                    Cada hechizo tiene su momento perfecto: desde una simple ilusión que evita un enfrentamiento hasta una bola de fuego que cambia el rumbo del combate. 
+                                                    Además, las habilidades fuera de combate también influyen en la historia, desbloqueando nuevos caminos, soluciones pacíficas o formas creativas de superar obstáculos. 
+                                                    <strong>Baldur’s Gate 3</strong> convierte cada punto de habilidad en una oportunidad para expresar tu estilo de juego y moldear el mundo a tu manera.
+                                                    </p>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <img src="/img/blog/content/bg3-blog4-magias.webp" alt="Hechizos en Baldur’s Gate 3" class="img-fluid rounded shadow-sm">
+                                                </div>
+                                            </div>
+                                        </div>
                                         </section>
                                     </div>
                     ',
@@ -209,16 +242,24 @@ class BlogSeeder extends Seeder
                                             </p>
                                         </section>
 
-                                        <section>
+                                        <section class="my-5">
+                                        <div class="container">
                                             <h2>Explorando ruinas antiguas</h2>
-                                            <img src="../../../public/img/blog/content/bg3-blog5-ruinas.jpg" alt="Ruinas en Baldur’s Gate 3">
-                                            <p>
-                                                Las ruinas esconden secretos y tesoros, y a menudo presentan desafíos que requieren resolver acertijos y aplicar estrategia. 
-                                                Estas zonas ofrecen un vistazo a civilizaciones perdidas y a los orígenes de los <em>Mind Flayers</em>. 
-                                                Cada ruina está llena de trampas, enigmas y recompensas ocultas para quienes se atrevan a explorar. 
-                                                Aventurarse en estos lugares no solo otorga equipamiento valioso, sino también fragmentos de historia que amplían el universo del juego, 
-                                                demostrando que <strong>Baldur’s Gate 3</strong> es tanto una experiencia de combate como de descubrimiento arqueológico y narrativo.
-                                            </p>
+                                            <div class="row align-items-center my-4">
+                                                <div class="col-md-8">
+                                                    <p>
+                                                    Las ruinas esconden secretos y tesoros, y a menudo presentan desafíos que requieren resolver acertijos y aplicar estrategia. 
+                                                    Estas zonas ofrecen un vistazo a civilizaciones perdidas y a los orígenes de los <em>Mind Flayers</em>. 
+                                                    Cada ruina está llena de trampas, enigmas y recompensas ocultas para quienes se atrevan a explorar. 
+                                                    Aventurarse en estos lugares no solo otorga equipamiento valioso, sino también fragmentos de historia que amplían el universo del juego, 
+                                                    demostrando que <strong>Baldur’s Gate 3</strong> es tanto una experiencia de combate como de descubrimiento arqueológico y narrativo.
+                                                    </p>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <img src="/img/blog/content/bg3-blog5-ruinas.webp" alt="Ruinas en Baldur’s Gate 3" class="img-fluid rounded shadow-sm">
+                                                </div>
+                                            </div>
+                                        </div>
                                         </section>
                                     </div>
                     ',
@@ -251,16 +292,23 @@ class BlogSeeder extends Seeder
                                             </p>
                                         </section>
 
-                                        <section>
+                                        <section class="my-5">
+                                        <div class="container">
                                             <h2>Innovaciones técnicas</h2>
-                                            <img src="../../../public/img/blog/content/bg3-blog6-grafico.jpg" alt="Innovaciones técnicas en Baldur’s Gate 3">
-                                            <p>
-                                                El motor gráfico y la adaptación de <em>D&D 5e</em> permiten interacciones realistas, físicas dinámicas y combates visualmente espectaculares. 
-                                                Cada animación, iluminación y expresión facial contribuye a una inmersión total. 
-                                                La atención al detalle técnico convierte al juego en una <strong>proeza visual y narrativa</strong>. 
-                                                Además, su arquitectura de decisiones y reactividad sistémica establece un nuevo estándar en los <em>RPG modernos</em>. 
-                                                <strong>Baldur’s Gate 3</strong> no solo brilla por su historia, sino por la forma en que la tecnología y el diseño se fusionan para contarla.
-                                            </p>
+                                            <div class="row align-items-center my-4">
+                                                <div class="col-md-8"                                            
+                                                    <p>
+                                                    El motor gráfico y la adaptación de <em>D&D 5e</em> permiten interacciones realistas, físicas dinámicas y combates visualmente espectaculares. 
+                                                    Cada animación, iluminación y expresión facial contribuye a una inmersión total. 
+                                                    La atención al detalle técnico convierte al juego en una <strong>proeza visual y narrativa</strong>. 
+                                                    Además, su arquitectura de decisiones y reactividad sistémica establece un nuevo estándar en los <em>RPG modernos</em>. 
+                                                    <strong>Baldur’s Gate 3</strong> no solo brilla por su historia, sino por la forma en que la tecnología y el diseño se fusionan para contarla.
+                                                    </p>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <img src="/img/blog/content/bg3-blog6-grafico.webp" alt="Innovaciones técnicas en Baldur’s Gate 3" class="img-fluid rounded shadow-sm">
+                                                </div>
+                                            </div>
                                         </section>
                                     </div>
                     ',
