@@ -1,57 +1,35 @@
 
-
-
-// const videoHome = document.querySelector('#videoHome');
-
-// // const firstMouseImage = document.querySelector('#firstImg');
-
-
-// // let startRedial = 30;
-
-
-
-
-// window.onscroll = function()  {
-
-//     videoHomeMannager();
-//     // firstMouseImageMannager();
-
-// }
-
-
-// function videoHomeMannager() {
-//     const spects = videoHome.getBoundingClientRect();
-//     const negativeHeight = spects.height * -1;
-//     if(negativeHeight > spects.y) {
-//         videoHome.pause();
-//     } else {
-//         videoHome.play();
-//     }
-// }
-
-
-// // function firstMouseImageMannager() {
-// //     if(startRedial < 80) {
-// //         startRedial += 0.1;
-// //     }
-// //     firstMouseImage.style.background = `radial-gradient(circle at center, rgba(66, 10, 62, 0.699), black ${startRedial}%)`;
-
-// // }
-
-// // TOOLTIPS
-
-// const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle=tooltip]')
-// const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
-
-
 const carrousel = document.querySelector('#carrousel');
 
 function scrollearWheel(objeto, evento) {
     gsap.to(objeto, {
-    scrollLeft: evento.deltaY > 0 ? "+=250" : "-=250",
-    duration: 0.8,
-    ease: "power2.out"
-});
+        scrollLeft: evento.deltaY > 0 ? "+=250" : "-=250",
+        duration: 0.8,
+        ease: "power2.out"
+    });
+}
+
+function scrollearTouch(objeto) {
+  let startX = 0;
+  let endX = 0;
+
+  objeto.addEventListener('touchstart', (e) => {
+    startX = e.touches[0].clientX;
+  }, { passive: false });
+
+  objeto.addEventListener('touchend', (e) => {
+    endX = e.changedTouches[0].clientX; 
+    const deltaX = endX - startX; 
+
+   
+    if (Math.abs(deltaX) > 30) { 
+      gsap.to(objeto, {
+        scrollLeft: deltaX < 0 ? "+=250" : "-=250",
+        duration: 0.8,
+        ease: "power2.out"
+      });
+    }
+  }, { passive: false });
 }
 
 function scrollear(objeto) {
@@ -71,7 +49,7 @@ if(carrousel) {
 
     scrollearWheel(carrousel, evento);
 }, { passive: false });
-
+    scrollearTouch(carrousel);
 }
 
 const carrouselNoticias = document.querySelector('#carrouselNoticias');
@@ -88,4 +66,5 @@ if(carrouselNoticias) {
 
         scrollearWheel(carrouselNoticias, evento)
     }, { passive: false });
+    scrollearTouch(carrouselNoticias);
 }

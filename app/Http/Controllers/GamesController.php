@@ -47,7 +47,7 @@ class GamesController extends Controller
         'titulo' => 'required|min:5|max:255',
         'fecha_lanzamiento' => 'required|before_or_equal:today|date_format:Y-m-d',
         'descripcion' => 'required|min:25',
-        'precio' => 'required|numeric'
+        'precio' => 'required|numeric|min:0'
       ],
       [
         'titulo.required' => 'El título es obligatorio',
@@ -60,6 +60,7 @@ class GamesController extends Controller
         'descripcion.min' => 'La descripción debe tener más de 25 caracteres',
         'precio.required' => 'El precio es obligatorio',
         'precio.numeric' => 'El precio debe ser un número',
+        'precio.min' => 'El precio debe ser mayor a 0'
       ]);
 
 
@@ -100,7 +101,7 @@ class GamesController extends Controller
         'titulo' => 'required|min:5|max:255',
         'fecha_lanzamiento' => 'required|before_or_equal:today|date_format:Y-m-d',
         'descripcion' => 'required|min:25',
-        'precio' => 'required|numeric'
+        'precio' => 'required|numeric|min:0'
       ],
       [
         'titulo.required' => 'El título es obligatorio',
@@ -113,6 +114,7 @@ class GamesController extends Controller
         'descripcion.min' => 'La descripción debe tener más de 25 caracteres',
         'precio.required' => 'El precio es obligatorio',
         'precio.numeric' => 'El precio debe ser un número',
+        'precio.min' => 'El precio debe ser mayor a 0'
       ]);
 
       $data = $request->only(['titulo', 'fecha_lanzamiento', 'descripcion', 'precio']);

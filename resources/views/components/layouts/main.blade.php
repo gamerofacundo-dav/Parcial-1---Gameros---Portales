@@ -18,7 +18,7 @@
    
 </head>
 <body>
-    <div id="user">
+    <div id="user" class="d-flex flex-column">
         <header>
         <div class="blur">
             <nav class="navbar navbar-expand-lg especificidad">
@@ -44,7 +44,7 @@
                             </li>
                             @else
                             <li class="nav-item">
-                                <x-nav-link routeto="blogs.adminBlogs">Panel de admin</x-nav-link>
+                                <x-nav-link routeto="homeAdmin">Panel de admin</x-nav-link>
                             </li>
                             <li class="nav-item">
                                 <form action="{{ route('auth.logout') }}" method="POST">
@@ -59,7 +59,7 @@
             </nav>
         </div>
         </header>
-        <main>
+        <main class="flex-fill">
             {{$slot}}
         </main>
         <footer>

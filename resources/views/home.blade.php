@@ -117,7 +117,7 @@
                                 <span>{{ $blog->autor }} - {{ $blog->created_at }}</span>
                                 <h3>{{ $blog->titulo }}</h3>
                                 <p>{{ $blog->descripcion }}</p>
-                                <a href="{{ route('blogs.details', ['id' => $blog->blog_id]) }}">Leer más</a>
+                                <a href="{{ route('blogs.details', ['id' => $blog->blog_id]) }}" class="btn-action">Leer más</a>
                                 
                             </div>
                         </article>

@@ -35,6 +35,7 @@
                     aria-errormessage="error-fecha_lanzamiento"
                     @enderror
                     value="{{ old('fecha_lanzamiento', $game->fecha_lanzamiento) }}"
+                    >
                     @error('fecha_lanzamiento')
                      <p class="text-danger">{{ $message }}</p>
                     @enderror
