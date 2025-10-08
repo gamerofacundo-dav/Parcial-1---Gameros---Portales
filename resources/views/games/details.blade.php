@@ -5,6 +5,7 @@
 
 
 <x-layouts.main>
+    <x-slot:title>Detalles del juego</x-slot:title>
     <div id="detalles">
         <section>
             <div class="d-flex flex-column-reverse flex-lg-row bg align-items-center justify-center">

@@ -15,7 +15,7 @@ body {
 
 
 #user {
-    background-image: url('../img/smoke.jpg');
+    background-image: url('../img/smoke.webp');
     background-repeat: repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -77,13 +77,13 @@ body {
         }
     }
     .games {
-        background-image: url('../img/buy-now-background.jpg');
+        background-image: url('../img/buy-now-background.webp');
         background-image: cover;
         background-position: center;  
         position: relative;
     }
     .blogs {
-        background-image: url('../img/blog/test-blog-3.jpg');
+        background-image: url('../img/blog/test-blog-3.webp');
         background-image: cover;
         background-position: center;
         position: relative;
@@ -131,13 +131,13 @@ body {
             content: '';
             position: absolute;
             inset: 0;
-            background-image: url('../img/blog/test-blog-1jpg.jpg');
+            background-image: url('../img/blog/test-blog-1jpg.webp');
             background-size: cover;
             background-position: top;
-            -webkit-mask-image: url('../img/mask/buy-now-background-mask.png'); 
+            -webkit-mask-image: url('../img/mask/buy-now-background-mask.webp'); 
             -webkit-mask-repeat: no-repeat;
             -webkit-mask-size: cover;
-            mask-image: url('../img/mask/buy-now-background-mask.png');
+            mask-image: url('../img/mask/buy-now-background-mask.webp');
             mask-repeat: no-repeat;
             mask-size: 80% 150%;
             z-index: 0;
@@ -170,12 +170,12 @@ body {
                     content: '';
                     position: absolute;
                     inset: 0;
-                    background-image: url('../img/01_BG_wallpaper_3840x2160px.webp');
+                    background-image: url('../img/01_BG_wallpaper_1920x1080.webp');
                     background-size: cover;
-                    -webkit-mask-image: url('../img/mask/buy-now-background-mask.png'); 
+                    -webkit-mask-image: url('../img/mask/buy-now-background-mask.webp'); 
                     -webkit-mask-repeat: no-repeat;
                     -webkit-mask-size: cover;
-                    mask-image: url('../img/mask/buy-now-background-mask.png');
+                    mask-image: url('../img/mask/buy-now-background-mask.webp');
                     mask-repeat: no-repeat;
                     mask-size: 80% 150%;
                     z-index: 0;
@@ -208,12 +208,12 @@ body {
                     content: '';
                     position: absolute;
                     inset: 0;
-                    background-image: url('../img/buy-now-background.jpg');
+                    background-image: url('../img/buy-now-background.webp');
                     background-size: cover;
-                    -webkit-mask-image: url('../img/mask/buy-now-background-mask.png'); 
+                    -webkit-mask-image: url('../img/mask/buy-now-background-mask.webp'); 
                     -webkit-mask-repeat: no-repeat;
                     -webkit-mask-size: cover;
-                    mask-image: url('../img/mask/buy-now-background-mask.png');
+                    mask-image: url('../img/mask/buy-now-background-mask.webp');
                     mask-repeat: no-repeat;
                     mask-size: 80% 150%;
                     transform: scaleX(-1);
@@ -251,10 +251,10 @@ body {
                     background-image: url('../img/faq-background.jpg');
                     background-size: cover;
                     background-position: top;
-                    -webkit-mask-image: url('../img/mask/buy-now-background-mask.png'); 
+                    -webkit-mask-image: url('../img/mask/buy-now-background-mask.webp'); 
                     -webkit-mask-repeat: no-repeat;
                     -webkit-mask-size: cover;
-                    mask-image: url('../img/mask/buy-now-background-mask.png');
+                    mask-image: url('../img/mask/buy-now-background-mask.webp');
                     mask-repeat: no-repeat;
                     mask-size: 80% 150%;
                     z-index: 0;
@@ -271,13 +271,13 @@ body {
             content: '';
             position: absolute;
             inset: 0;
-            background-image: url('../img/blog/test-blog-2jpg.jpg');
+            background-image: url('../img/blog/test-blog-2jpg.webp');
             background-size: cover;
             background-position: top;
-            -webkit-mask-image: url('../img/mask/buy-now-background-mask.png'); 
+            -webkit-mask-image: url('../img/mask/buy-now-background-mask.webp'); 
             -webkit-mask-repeat: no-repeat;
             -webkit-mask-size: cover;
-            mask-image: url('../img/mask/buy-now-background-mask.png');
+            mask-image: url('../img/mask/buy-now-background-mask.webp');
             mask-repeat: no-repeat;
             mask-size: 100% 150%;
             z-index: 0;
@@ -317,13 +317,13 @@ body {
             content: '';
             position: absolute;
             inset: 0;
-            background-image: url('../img/blog/test-blog-3.jpg');
+            background-image: url('../img/blog/test-blog-3.webp');
             background-size: cover;
             background-position: top;
-            -webkit-mask-image: url('../img/mask/buy-now-background-mask.png'); 
+            -webkit-mask-image: url('../img/mask/buy-now-background-mask.webp'); 
             -webkit-mask-repeat: no-repeat;
             -webkit-mask-size: cover;
-            mask-image: url('../img/mask/buy-now-background-mask.png');
+            mask-image: url('../img/mask/buy-now-background-mask.webp');
             mask-repeat: no-repeat;
             mask-size: 100% 150%;
             z-index: 0;
@@ -445,7 +445,7 @@ nav.navbar {
     }
     #section-1 {
         height: 90dvh;
-        background-image: url('../img/baldurs-3.jpg');
+        background-image: url('../img/baldurs-3.webp');
         background-size: cover;
         background-position: bottom;
         background-attachment: fixed;
@@ -520,15 +520,15 @@ nav.navbar {
             padding: 1rem;
         }
         .bg-1 {
-            background-image: url('../img/bg-personajes/bg-astarion.png');
+            background-image: url('../img/bg-personajes/bg-astarion.webp');
           
         }
          .bg-2 {
-            background-image: url('../img/bg-personajes/bg-laezel.png');
+            background-image: url('../img/bg-personajes/bg-laezel.webp');
           
         }
         .bg-3 {
-            background-image: url('../img/bg-personajes/bg-karlach.png');
+            background-image: url('../img/bg-personajes/bg-karlach.webp');
           
         }
         .mask-1 {
@@ -549,7 +549,7 @@ nav.navbar {
 
     #section-3 {
         > div > a:first-child > div > div {
-            background-image: url('../img/buy-now-background.jpg');
+            background-image: url('../img/buy-now-background.webp');
         }
         > div > a:last-child > div > div {
             background-image: url('../img/faq-background.jpg');
@@ -606,7 +606,7 @@ nav.navbar {
             -1px -1px 0 #ffffff; 
         }
         .mask {
-            mask-image: url('../img/mask/buy-now-background-mask.png');
+            mask-image: url('../img/mask/buy-now-background-mask.webp');
             mask-size: 100% 100%;
             mask-repeat: no-repeat;
             mask-position: top;
@@ -690,7 +690,7 @@ nav.navbar {
             
             height: 350px;
             aspect-ratio: 1/1;
-            background-image: url('../img/blog/test-blog-1jpg.jpg');
+            background-image: url('../img/blog/test-blog-1jpg.webp');
             background-size: cover;
             &::after {
                 content: '';
@@ -709,10 +709,10 @@ nav.navbar {
             content: '';
             position: absolute;
             inset: 0;
-            -webkit-mask-image: url('../img/mask/buy-now-background-mask.png'); 
+            -webkit-mask-image: url('../img/mask/buy-now-background-mask.webp'); 
             -webkit-mask-repeat: no-repeat;
             -webkit-mask-size: cover;
-            mask-image: url('../img/mask/buy-now-background-mask.png');
+            mask-image: url('../img/mask/buy-now-background-mask.webp');
             mask-repeat: no-repeat;
             mask-size: 100% 100%;
             z-index: 2; 
@@ -722,7 +722,7 @@ nav.navbar {
         .bg-dedicado-2 {
             height: 350px;
             aspect-ratio: 1/1;
-            background-image: url('../img/blog/test-blog-2jpg.jpg');
+            background-image: url('../img/blog/test-blog-2jpg.webp');
             background-size: cover;
                     &::after {
                 content: '';
@@ -739,7 +739,7 @@ nav.navbar {
         .bg-dedicado-3 {
             height: 350px;
             aspect-ratio: 1/1;
-            background-image: url('../img/blog/test-blog-3.jpg');
+            background-image: url('../img/blog/test-blog-3.webp');
             background-size: cover;
                     &::after {
                 content: '';
@@ -756,7 +756,7 @@ nav.navbar {
         .bg-dedicado-4 {
             height: 350px;
             aspect-ratio: 1/1;
-            background-image: url('../img/blog/test-blog-3.jpg');
+            background-image: url('../img/blog/test-blog-3.webp');
             background-size: cover;
                     &::after {
                 content: '';
@@ -774,7 +774,7 @@ nav.navbar {
         .bg-dedicado-5 {
             height: 350px;
             aspect-ratio: 1/1;
-            background-image: url('../img/blog/test-blog-2jpg.jpg');
+            background-image: url('../img/blog/test-blog-2jpg.webp');
             background-size: cover;
                     &::after {
                 content: '';
@@ -792,7 +792,7 @@ nav.navbar {
         .bg-dedicado-6 {
             height: 350px;
             aspect-ratio: 1/1;
-            background-image: url('../img/blog/test-blog-1jpg.jpg');
+            background-image: url('../img/blog/test-blog-1jpg.webp');
             background-size: cover;
                     &::after {
                 content: '';
@@ -812,12 +812,12 @@ nav.navbar {
         content: '';
         position: absolute;
         inset: 0;
-        background-image: url('../img/01_BG_wallpaper_3840x2160px.webp');
+        background-image: url('../img/01_BG_wallpaper_1920x1080.webp');
         background-size: cover;
-        -webkit-mask-image: url('../img/mask/buy-now-background-mask.png'); 
+        -webkit-mask-image: url('../img/mask/buy-now-background-mask.webp'); 
         -webkit-mask-repeat: no-repeat;
         -webkit-mask-size: cover;
-        mask-image: url('../img/mask/buy-now-background-mask.png');
+        mask-image: url('../img/mask/buy-now-background-mask.webp');
         mask-repeat: no-repeat;
         mask-size: 100% 100%;
         z-index: -1;
@@ -847,13 +847,13 @@ nav.navbar {
             content: '';
             position: absolute;
             inset: 0;
-            background-image: url('../img/hero-background-video-still.jpg');transform: scaleX(-1);
+            background-image: url('../img/hero-background-video-still.webp');transform: scaleX(-1);
             background-size: cover;
             background-position: center;
-            -webkit-mask-image: url('../img/mask/buy-now-background-mask.png'); 
+            -webkit-mask-image: url('../img/mask/buy-now-background-mask.webp'); 
             -webkit-mask-repeat: no-repeat;
             -webkit-mask-size: cover;
-            mask-image: url('../img/mask/buy-now-background-mask.png');
+            mask-image: url('../img/mask/buy-now-background-mask.webp');
             mask-repeat: no-repeat;
             mask-size: 160% 100%;
             z-index: -1;
@@ -866,13 +866,13 @@ nav.navbar {
             content: '';
             position: absolute;
             inset: 0;
-            background-image: url('../img/faq-background-filp.jpg');transform: scaleX(-1);
+            background-image: url('../img/faq-background-filp.webp');transform: scaleX(-1);
             background-size: cover;
             background-position: center;
-            -webkit-mask-image: url('../img/mask/buy-now-background-mask.png'); 
+            -webkit-mask-image: url('../img/mask/buy-now-background-mask.webp'); 
             -webkit-mask-repeat: no-repeat;
             -webkit-mask-size: cover;
-            mask-image: url('../img/mask/buy-now-background-mask.png');
+            mask-image: url('../img/mask/buy-now-background-mask.webp');
             mask-repeat: no-repeat;
             mask-size: 100% 100%;
             z-index: -1;
@@ -905,12 +905,12 @@ nav.navbar {
             content: '';
             position: absolute;
             inset: 0;
-            background-image: url('../img/buy-now-background.jpg');
+            background-image: url('../img/buy-now-background.webp');
             background-size: cover;
-            -webkit-mask-image: url('../img/mask/buy-now-background-mask.png'); 
+            -webkit-mask-image: url('../img/mask/buy-now-background-mask.webp'); 
             -webkit-mask-repeat: no-repeat;
             -webkit-mask-size: cover;
-            mask-image: url('../img/mask/buy-now-background-mask.png');
+            mask-image: url('../img/mask/buy-now-background-mask.webp');
             mask-repeat: no-repeat;
             mask-size: 180% 100%;
             z-index: -1;
@@ -929,12 +929,12 @@ nav.navbar {
         content: '';
         position: absolute;
         inset: 0;
-        background-image: url('../img/buy-now-background.jpg');
+        background-image: url('../img/buy-now-background.webp');
         background-size: cover;
-        -webkit-mask-image: url('../img/mask/buy-now-background-mask.png'); 
+        -webkit-mask-image: url('../img/mask/buy-now-background-mask.webp'); 
         -webkit-mask-repeat: no-repeat;
         -webkit-mask-size: cover;
-        mask-image: url('../img/mask/buy-now-background-mask.png');
+        mask-image: url('../img/mask/buy-now-background-mask.webp');
         mask-repeat: no-repeat;
         mask-size: 180% 100%;
         z-index: -1;
@@ -945,17 +945,17 @@ nav.navbar {
         inset: 0;
         background-image: url('../img/faq-background.jpg');
         background-size: cover;
-        -webkit-mask-image: url('../img/mask/buy-now-background-mask.png'); 
+        -webkit-mask-image: url('../img/mask/buy-now-background-mask.webp'); 
         -webkit-mask-repeat: no-repeat;
         -webkit-mask-size: cover;
-        mask-image: url('../img/mask/buy-now-background-mask.png');
+        mask-image: url('../img/mask/buy-now-background-mask.webp');
         mask-repeat: no-repeat;
         mask-size: 180% 100%;
         z-index: -1;
     } */
     
     /* .mask {
-        mask-image: url('../img/mask/buy-now-background-mask.png');
+        mask-image: url('../img/mask/buy-now-background-mask.webp');
         mask-size: 150% 100%;
         mask-repeat: no-repeat;
         mask-position: center;
@@ -1029,12 +1029,12 @@ nav.navbar {
                 content: '';
                 position: absolute;
                 inset: 0;
-                background-image: url('../img/01_BG_wallpaper_3840x2160px.webp');transform: scaleX(-1);
+                background-image: url('../img/01_BG_wallpaper_1920x1080.webp');transform: scaleX(-1);
                 background-size: cover;
-                -webkit-mask-image: url('../img/mask/buy-now-background-mask.png'); 
+                -webkit-mask-image: url('../img/mask/buy-now-background-mask.webp'); 
                 -webkit-mask-repeat: no-repeat;
                 -webkit-mask-size: cover;
-                mask-image: url('../img/mask/buy-now-background-mask.png');
+                mask-image: url('../img/mask/buy-now-background-mask.webp');
                 mask-repeat: no-repeat;
                 mask-size: 160% 100%;
                 z-index: -1;
@@ -1067,12 +1067,12 @@ nav.navbar {
             content: '';
             position: absolute;
             inset: 0;
-            background-image: url('../img/01_BG_wallpaper_3840x2160px.webp');transform: scaleX(-1);
+            background-image: url('../img/01_BG_wallpaper_1920x1080.webp');transform: scaleX(-1);
             background-size: cover;
-            -webkit-mask-image: url('../img/mask/buy-now-background-mask.png'); 
+            -webkit-mask-image: url('../img/mask/buy-now-background-mask.webp'); 
             -webkit-mask-repeat: no-repeat;
             -webkit-mask-size: cover;
-            mask-image: url('../img/mask/buy-now-background-mask.png');
+            mask-image: url('../img/mask/buy-now-background-mask.webp');
             mask-repeat: no-repeat;
             mask-size: 160% 100%;
             z-index: -1;
@@ -1118,7 +1118,7 @@ nav.navbar {
                     height: 450px;
                     width: 100%;
                     aspect-ratio: 1/1;
-                    background-image: url('../img/blog/test-blog-1jpg.jpg');
+                    background-image: url('../img/blog/test-blog-1jpg.webp');
                     background-size: cover;
                     transition: all .4s ease-in-out;
                 
@@ -1139,7 +1139,7 @@ nav.navbar {
                     height: 450px;
                     aspect-ratio: 1/1;
                     width: 100%;
-                    background-image: url('../img/blog/test-blog-2jpg.jpg');
+                    background-image: url('../img/blog/test-blog-2jpg.webp');
                     background-size: cover;
                     transition: all .4s ease-in-out;
                     &::after {
@@ -1159,7 +1159,7 @@ nav.navbar {
                     height: 450px;
                     aspect-ratio: 1/1;
                     width: 100%;
-                    background-image: url('../img/blog/test-blog-3.jpg');
+                    background-image: url('../img/blog/test-blog-3.webp');
                     background-size: cover;
                     transition: all .4s ease-in-out;
                     &::after {

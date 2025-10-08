@@ -1,4 +1,5 @@
 <x-layouts.admin>
+    <x-slot:title>Panel admin</x-slot:title>
     <div id="adminHome">
         <section class="container" id="section-1">
             <div class="d-flex flex-column flex-md-row justify-content-center gap-5 mt-4">

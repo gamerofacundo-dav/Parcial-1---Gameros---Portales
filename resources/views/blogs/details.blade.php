@@ -1,4 +1,5 @@
 <x-layouts.main>
+    <x-slot:title>Detalles del blog</x-slot:title>
     <section id="blog-detalle">
         <div id="blog-detalle-{{ $blog->blog_id }}">
             <section>
