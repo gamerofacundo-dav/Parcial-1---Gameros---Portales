@@ -3,6 +3,7 @@
 use App\Http\Controllers\BlogsController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\GameController;
+use App\Http\Middleware\CheckUserRole;
 use Illuminate\Support\Facades\Route;
 
 
@@ -11,9 +12,12 @@ Route::get('/', [\App\Http\Controllers\HomeController::class, 'home'])
 
 Route::get('/admin', [\App\Http\Controllers\HomeController::class, 'adminHome']) 
     ->name('homeAdmin')
-    ->middleware('auth');
+    ->middleware('auth')
+    ->middleware(CheckUserRole::class);
 
-//auth
+// AUTH USERS
+
+// ...Login
 Route::get('/ingresar', [\App\Http\Controllers\AuthController::class, 'show'] )
      ->name('auth.login.show');
 
@@ -22,6 +26,15 @@ Route::post('/ingresar', [\App\Http\Controllers\AuthController::class, 'process'
 
 Route::post('/cerrar-sesion', [\App\Http\Controllers\AuthController::class, 'logout'] )
     ->name('auth.logout');
+
+
+// ...Register
+
+Route::get('/registrarse', [\App\Http\Controllers\AuthController::class, 'showRegister'] )
+    ->name('auth.register');
+
+Route::post('/registrarse', [\App\Http\Controllers\AuthController::class, 'processRegister'] )
+    ->name('auth.register.process');
 
 // BLOGS
 Route::get('/blog', [\App\Http\Controllers\BlogsController::class, 'blog']) 
@@ -42,11 +55,13 @@ Route::get('/{id}', [\App\Http\Controllers\GamesController::class, 'gameById'])
 
 Route::get('/admin/adminJuegos', [\App\Http\Controllers\GamesController::class, 'adminJuegos'])
     ->name('adminJuegos')
-    ->middleware('auth');
+    ->middleware('auth')
+    ->middleware(CheckUserRole::class);
 
 Route::get('/admin/adminJuegos/crear', [\App\Http\Controllers\GamesController::class, 'create'])
     ->name('games.create')
-    ->middleware('auth');
+    ->middleware('auth')
+    ->middleware(CheckUserRole::class);
 
 Route::post('/admin/adminJuegos/crear', [\App\Http\Controllers\GamesController::class, 'store'])  
     ->name('games.store')
@@ -54,54 +69,87 @@ Route::post('/admin/adminJuegos/crear', [\App\Http\Controllers\GamesController::
 
 Route::get('/admin/adminJuegos/{id}/eliminar', [\App\Http\Controllers\GamesController::class, 'delete']) 
     ->name('games.delete')
-    ->middleware('auth');
+    ->middleware('auth')
+    ->middleware(CheckUserRole::class);
 
 Route::post('/admin/adminJuegos/{id}/eliminar', [\App\Http\Controllers\GamesController::class, 'destroy']) 
     ->name('games.destroy')
-    ->middleware('auth');
+    ->middleware('auth')
+    ->middleware(CheckUserRole::class);
 
 Route::get('/admin/adminJuegos/{id}/editar', [\App\Http\Controllers\GamesController::class, 'edit'])
     ->name('games.edit')
-    ->middleware('auth');
+    ->middleware('auth')
+    ->middleware(CheckUserRole::class);
 
 Route::post('/admin/adminJuegos/{id}/editar', [\App\Http\Controllers\GamesController::class, 'update'])
     ->name('games.update')
-    ->middleware('auth');
+    ->middleware('auth')
+    ->middleware(CheckUserRole::class);
 
 
 // ADMIN BLOGS
 
 Route::get('/admin/admingBlogs', [\App\Http\Controllers\BlogsController::class, 'adminBlogs'])
     ->name('blogs.adminBlogs')
-    ->middleware('auth');
+    ->middleware('auth')
+    ->middleware(CheckUserRole::class);
     
 Route::get('/admin/admingBlogs/contenido/{id}', [\App\Http\Controllers\BlogsController::class, 'showContent'])
     ->name('blogs.blogContenido')
-    ->middleware('auth');
+    ->middleware('auth')
+    ->middleware(CheckUserRole::class);
 
 Route::get('/admin/adminBlogs/crear', [\App\Http\Controllers\BlogsController::class, 'create'])
     ->name('blogs.create')
-    ->middleware('auth');
+    ->middleware('auth')
+    ->middleware(CheckUserRole::class);
 
 Route::post('/admin/adminBlogs/crear', [\App\Http\Controllers\BlogsController::class, 'store'])  
     ->name('blogs.store')
-    ->middleware('auth');
+    ->middleware('auth')
+    ->middleware(CheckUserRole::class);
 
 Route::get('/admin/adminBlogs/{id}/eliminar', [\App\Http\Controllers\BlogsController::class, 'delete']) 
     ->name('blogs.delete')
-    ->middleware('auth');
+    ->middleware('auth')
+    ->middleware(CheckUserRole::class);
 
 Route::post('/admin/adminBlogs/{id}/eliminar', [\App\Http\Controllers\BlogsController::class, 'destroy']) 
     ->name('blogs.destroy')
-    ->middleware('auth');
+    ->middleware('auth')
+    ->middleware(CheckUserRole::class);
 
     
 Route::get('/admin/adminBlogs/{id}/editar', [\App\Http\Controllers\BlogsController::class, 'edit']) 
     ->name('blogs.edit')
-    ->middleware('auth');
+    ->middleware('auth')
+    ->middleware(CheckUserRole::class);
 
 Route::post('/admin/adminBlogs/{id}/editar', [\App\Http\Controllers\BlogsController::class, 'update']) 
     ->name('blogs.update')
-    ->middleware('auth');
+    ->middleware('auth')
+    ->middleware(CheckUserRole::class);
 
 
+// USER ADMIN
+
+Route::get('/admin/adminUsuarios', [\App\Http\Controllers\UserController::class, 'adminUsers'])
+    ->name('users.adminUsuarios')
+    ->middleware('auth')
+    ->middleware(CheckUserRole::class);
+
+Route::get('/admin/adminUsuarios/{id}/compras',[\App\Http\Controllers\UserController::class, 'compras'])
+    ->name('users.compras')
+    ->middleware('auth')
+    ->middleware(CheckUserRole::class);
+
+Route::get('/admin/adminUsuarios/{id}/editar',[\App\Http\Controllers\UserController::class, 'edit'])
+    ->name('users.edit')
+    ->middleware('auth')
+    ->middleware(CheckUserRole::class);
+
+Route::post('/admin/adminUsuarios/{id}/editar',[\App\Http\Controllers\UserController::class, 'update'])
+    ->name('users.update')
+    ->middleware('auth')
+    ->middleware(CheckUserRole::class);

@@ -94,10 +94,10 @@
                             <div class="container" id="digital">
                                 <h3 class="text-center">{{ $game->titulo }}</h3>
                                 <div>
-                                    <img src="img/{{ $game->portada }}" class="img-fluid"></img>
+                                    <img src="{{ \Storage::url($game->portada) }}" class="img-fluid"></img>
                                 </div>
                             </div>
-                        </div>
+                        </div>                   
                     </a>
                 @endforeach
             </div>
@@ -125,5 +125,8 @@
                 </div>
             </div>
         </section>
+    </div>
+    <div>
+        
     </div>
 </x-layouts.main>

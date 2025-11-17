@@ -55,7 +55,7 @@ class BlogsController extends Controller {
         'titulo' => 'required|min:5|max:255',
         'descripcion' => 'required|max:90',
         'contenido' => 'required',
-        'autor' => 'required'
+        'autor' => 'required|max:255'
       ],
       [
         'titulo.required' => 'El título es obligatorio',
@@ -65,6 +65,7 @@ class BlogsController extends Controller {
         'descripcion.max' => 'La descripción no debe tener más de 90 caracteres',
         'contenido.required' => 'La descripción es obligatoria',
         'autor.required' => 'El autor es obligatorio',
+        'autor.max' => 'El autor no debe tener más de 255 caracteres',
       ]);
 
       $contenidoLimpio = preg_replace('#<script.*?>.*?</script>#is', '', $request->contenido);
@@ -106,7 +107,7 @@ class BlogsController extends Controller {
         'titulo' => 'required|min:5|max:255',
         'descripcion' => 'required|max:90',
         'contenido' => 'required',
-        'autor' => 'required'
+        'autor' => 'required|max:255'
       ],
       [
         'titulo.required' => 'El título es obligatorio',
@@ -116,6 +117,7 @@ class BlogsController extends Controller {
         'descripcion.max' => 'La descripción no debe tener más de 90 caracteres',
         'contenido.required' => 'La descripción es obligatoria',
         'autor.required' => 'El autor es obligatorio',
+        'autor.max' => 'El autor no debe tener más de 255 caracteres',
       ]);
 
        $contenidoLimpio = preg_replace('#<script.*?>.*?</script>#is', '', $request->contenido);

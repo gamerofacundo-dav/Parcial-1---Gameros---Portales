@@ -83,8 +83,9 @@
                      <p class="text-danger">{{ $message }}</p>
                     @enderror
                 </div>
-                <div class="d-flex justify-content-center">
-                    <input type="submit" value="Agregar">
+                <div class="d-flex justify-content-center gap-3 mt-4">
+                    <input type="submit" value="Agregar" class="btn btn-primary px-4">
+                    <a href="{{ url()->previous() }}" class="btn btn-secondary px-4">Cancelar</a>
                 </div>
             </form>
         </div>

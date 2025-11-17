@@ -1,8 +1,8 @@
 <x-layouts.main>
-    <x-slot:title>Ingresar a mi cuenta</x-slot:title>
+    <x-slot:title>Registrse</x-slot:title>
 
     <section id="iniciar-sesion" class="d-flex flex-column justify-content-center align-items-center">
-        <h1 class="mb-3 text-ligh">Ingresar</h1>
+        <h1 class="mb-3 text-ligh">Registrarse</h1>
         @if ($errors->any())
         <div class="alert alert-danger">
             <ul class="mb-0">
@@ -17,8 +17,15 @@
                 {{ session('feedback.message') }}
             </div>
         @endif
-        <form action="{{ route('auth.login.process') }}" method="POST" class="mt-5 pt-4 text-light container" novalidate>
+        <form action="{{ route('auth.register.process') }}" method="POST" class="mt-5 pt-4 text-light container" novalidate>
             @csrf
+            <div class="mb-3">
+                <label for="name">Nombre</label>
+                <input type="text" id="name" name="name" value="{{ old('name') }}" class="@error('name') border-red @enderror w-100">
+                @error('name')
+                    <div class="text-danger">{{ $message }}</div>
+                @enderror
+            </div>
             <div class="mb-3">
                 <label for="email">Email</label>
                 <input type="email" id="email" name="email" value="{{ old('email') }}" class="@error('email') border-red @enderror w-100">
@@ -33,9 +40,15 @@
                     <div class="text-danger">{{ $message }}</div>
                 @enderror
             </div>
-            <input type="submit" value="Ingresar" class="btn-action mt-4">
-            <p>¿Aún no tenés una cuenta? <a href="{{ route('auth.register') }}" class="text-light">Hacé click acá para registrarte</a></p>
+            <div class="mb-3">
+                <label for="confirmPassword">Confirmar contraseña</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" autocomplete="on" class="@error('confirmPassword') border-red @enderror w-100">
+                @error('confirmPassword')
+                    <div class="text-danger">{{ $message }}</div>
+                @enderror
+            </div>
+            <input type="submit" value="Registrarme" class="btn-action mt-4">
+            <p>¿Tenés una cuenta? <a href="{{ route('auth.login.show') }}" class="text-light">Hacé click acá para iniciar sesión</a></p>
         </form>
-        
     </section>
 </x-layouts.main>

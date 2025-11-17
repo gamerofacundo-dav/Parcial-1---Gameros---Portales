@@ -42,10 +42,15 @@
                             <li class="nav-item">
                                 <x-nav-link routeto="auth.login.show">Iniciar seisón</x-nav-link>
                             </li>
-                            @else
                             <li class="nav-item">
-                                <x-nav-link routeto="homeAdmin">Panel de admin</x-nav-link>
+                                <x-nav-link routeto="auth.register">Registrarse</x-nav-link>
                             </li>
+                            @else
+                            @if (Auth::user()->rol === 'admin')
+                                <li class="nav-item">
+                                    <x-nav-link routeto="homeAdmin">Panel de admin</x-nav-link>
+                                </li>
+                            @endif
                             <li class="nav-item">
                                 <form action="{{ route('auth.logout') }}" method="POST">
                                     @csrf

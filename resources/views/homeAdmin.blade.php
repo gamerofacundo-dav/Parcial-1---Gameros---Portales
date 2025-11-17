@@ -19,6 +19,14 @@
                         </div>
                     </x-nav-link>
                 </div>
+                <div class="users">
+                    <x-nav-link routeto="users.adminUsuarios">
+                        <div class="d-flex justify-content-center flex-column align-items-center">
+                            <span>Administrar</span>
+                            <h2>Usarios</h2>
+                        </div>
+                    </x-nav-link>
+                </div>
             </div>
         </section>
     </div>

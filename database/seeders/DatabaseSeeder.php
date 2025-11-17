@@ -26,6 +26,11 @@ class DatabaseSeeder extends Seeder
             GameSeeder::class,
             BlogSeeder::class,
             UserSeeder::class,
+            PlatformsSeeder::class,
+            GameHasPlatformSeeder::class,
+            ClassSeeder::class,
+            BuysSeeder::class,
+            BuyHasProduct::class
         ]);
     }
 }

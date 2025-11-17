@@ -11,18 +11,35 @@
             <div class="d-flex flex-column-reverse flex-lg-row bg align-items-center justify-center">
                 <div>
                     <div>
-                        <img src="img/{{ $game->portada }}">
+                        <img src="{{ \Storage::url($game->portada) }}">
                     </div>
                 </div>
                 <div class="bajar d-flex flex-column align-items-center">
                     <h1>{{ $game->titulo }}</h1>
+                    <div class="d-flex gap-3">
+                        @foreach ($game->platforms as $platform) 
+                            <div>
+                                {{ $platform->nombre }}
+                            </div>
+                        @endforeach
+                    </div>
                     <div>
                         <p>{{ $game->descripcion }}</p>
+                        <p>Clases incluídas: </p>
+                        <div class="d-flex gap-4 clases justify-content-center">
+                            @foreach ($game->bg_classes as $clase)
+                                <div>
+                                    <img src="img/{{ $clase->imagen }}">
+                                    <span>{{$clase->nombre}}</span>
+                                </div>
+                            @endforeach
+                        </div>
                         <div class="precio d-flex align-items-center gap-3">
-                            <span>${{ Game::formatearPrecio($game->precio) }}</span>
+                            <span>${{ $game->precioFormateado }}</span>
                             <a href="#" class="btn-action">Comprar</a>
                         </div>
                     </div>
+                    
                 </div>
             </div>
         </section>
