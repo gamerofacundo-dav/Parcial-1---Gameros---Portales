@@ -30,7 +30,7 @@ class UserController extends Controller
     public function update(Request $request, int $id) {
         $request->validate([
         'name' => 'required|min:5|max:255',
-        'email' => 'required|min:5|max:255',
+        'email' => 'required|min:5|max:255|email',
       ],
       [
         'name.required' => 'El nombre es obligatorio',
@@ -39,6 +39,7 @@ class UserController extends Controller
         'email.required' => 'El email es obligatorio',
         'email.min' => 'El email debe tener más de 5 caracteres',
         'email.max' => 'El email no debe tener más de 255 caracteres',
+        'email.email' => 'El email debe contener @'
       ]);
 
       $data = $request->only(['name', 'email']);

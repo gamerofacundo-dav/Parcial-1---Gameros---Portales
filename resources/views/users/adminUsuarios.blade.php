@@ -26,11 +26,10 @@
                                 <td class="text-center p-4 align-middle">{{ $usuario->name }}</td>
                                 <td class="text-center p-4 align-middle">{{ $usuario->email }}</td>
                                 <td class="text-center p-4 align-middle">{{ $usuario->rol }}</td>
-                                <td class="text-center p-4 align-middle"><a href="{{ route('users.compras', ['id' => $usuario->id]) }}">Ver compras</a></td>
+                                <td class="text-center p-4 align-middle"><a href="{{ route('users.compras', ['id' => $usuario->id]) }}" class="btn-action">Ver compras</a></td>
                                 <td class="text-center p-4 align-middle">
                                     <div class="d-flex gap-3">
                                         <a href="{{ route('users.edit', ['id' => $usuario->id]) }}" class="btn btn-secondary"><i class="fa-solid fa-pen-to-square"></i></a>
-                                        <a href="{{ route('users.delete', ['id' => $usuario->id]) }}" class="btn btn-secondary bg-danger"><i class="fa-solid fa-trash"></i></a>
                                     </div>
                                 </td> 
                             </tr>
