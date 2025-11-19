@@ -7,7 +7,7 @@
     <section id="section-juegos-crear">
         <div class="container d-flex flex-column align-items-center">
             <h2 class="text-center">Agregar nuevo juego</h2>
-            <form action="{{ route('games.store') }}" method="POST" class="d-flex flex-column justify-content-around p-3" enctype="multipart/form-data">
+            <form action="{{ route('games.store') }}" method="POST" class="d-flex flex-column justify-content-around p-3" enctype="multipart/form-data" novalidate>
                 @csrf
                 <div class="d-flex flex-column">
                     <label for="titulo">Título</label>

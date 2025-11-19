@@ -19,7 +19,7 @@
     <section id="section-juegos-edit">
         <div class="container d-flex flex-column align-items-center">
             <h2 class="text-center">Editar Baldur's Gate 3 <span class="fw-bold">{{ $game->titulo }}</span></h2>
-            <form action="{{ route('games.update', ['id' => $game->juego_id]) }}" method="POST" enctype="multipart/form-data" class="d-flex flex-column justify-content-around p-3">
+            <form action="{{ route('games.update', ['id' => $game->juego_id]) }}" method="POST" enctype="multipart/form-data" class="d-flex flex-column justify-content-around p-3" novalidate>
                 @csrf
                 <div class="d-flex flex-column">
                     <label for="titulo">Título</label>

@@ -7,7 +7,7 @@
     <section id="section-blogs-crear">
         <div class="container d-flex flex-column align-items-center">
             <h2 class="text-center">Agregar nuevo blog</h2>
-            <form action=" {{ route('blogs.store') }}" method="POST" class="d-flex flex-column justify-content-around p-3">
+            <form action=" {{ route('blogs.store') }}" method="POST" class="d-flex flex-column justify-content-around p-3" novalidate>
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
                 <div class="d-flex flex-column">
                     <label for="titulo">Título</label>

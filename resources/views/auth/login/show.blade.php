@@ -5,7 +5,7 @@
     @if (session()->has('feedback.message'))
         <div class="alert alert-danger">{{ session('feedback.message') }}</div>
     @endif
-    <form action="{{ route('auth.login.process') }}" method="POST" class="mt-5 pt-4 text-light container">
+    <form action="{{ route('auth.login.process') }}" method="POST" class="mt-5 pt-4 text-light container" novalidate>
         @csrf
         <div class="mb-3">
             <label class="" for="email">Email</label>
