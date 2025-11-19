@@ -38,6 +38,9 @@
                                 <li class="nav-item">
                                     <x-nav-link routeto="blogs.adminBlogs" class="text-light">Blogs</x-nav-link>
                                 </li>
+                                <li class="nav-item">
+                                    <x-nav-link routeto="users.adminUsuarios" class="text-light">Usuarios</x-nav-link>
+                                </li>
                             </ul>
                         </div>
                     </div>

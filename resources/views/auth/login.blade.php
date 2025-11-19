@@ -18,7 +18,7 @@
             </div>
         @endif
         <form action="{{ route('auth.login.process') }}" method="POST" class="mt-5 pt-4 text-light container" novalidate>
-            @csrf
+            <input type="hidden" name="_token" value="{{ csrf_token() }}">
             <div class="mb-3">
                 <label for="email">Email</label>
                 <input type="email" id="email" name="email" value="{{ old('email') }}" class="@error('email') border-red @enderror w-100">

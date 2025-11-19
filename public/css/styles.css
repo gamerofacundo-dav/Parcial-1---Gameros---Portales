@@ -404,20 +404,17 @@ nav.navbar {
     .mi-fade {
         filter: grayscale(1);
         margin-top: -4.7rem;
-        height: 50dvh;
         width: 100%;
         position: relative;
         z-index: 1;
-     
-
+        padding-block: 2rem;
 
         > div {
             border: 3px solid rgb(133, 113, 0);
             background-color: rgba(0, 0, 0, 0.247);
             border-radius: 3rem;
-            border-style:double;
-               padding: 0;
-            height: 30dvh;
+            border-style: double;
+            padding: 0.5rem 1rem;
             img {
                 max-width: 200px;
             }
@@ -437,12 +434,14 @@ nav.navbar {
         }
     }
     #section-1 {
-        height: 90dvh;
+        min-height: 90dvh;
         background-image: url('../img/baldurs-3.webp');
         background-size: cover;
         background-position: bottom;
         background-attachment: fixed;
         position: relative;
+        display: flex;
+        align-items: center;   
         &::after {
             content: '';
             display: block;
@@ -458,7 +457,6 @@ nav.navbar {
             position: relative;
             bottom: 0;
             z-index: 1;
-            top: 50dvh;
             animation: fade-in 2s ease-out;
             h1 {
                 font-size: 3rem;
@@ -468,49 +466,54 @@ nav.navbar {
         }
     }
     #section-2 {
- 
- 
-        height: 80vh;
-      
+        position: relative;
+        padding: 4rem 0;
+
         img {
             max-width: 50%;
-   
             transform: translateX(250px);
         }
+
         .triangulo {
             width: 200px;
             height: 200px;
             position: absolute;
             top: 0;
-            background: linear-gradient(135deg, white 50%, rgba(0, 0, 0, 0) 50%);
             left: 0;
+            background: linear-gradient(135deg, white 50%, rgba(0, 0, 0, 0) 50%);
+            z-index: 0;
         }
+
         h2 {
             font-style: italic;
             font-weight: bold;
             color: rgb(0, 0, 0);
-            position: absolute;
-            top: 15px;
-            left: 30px;
+            position: relative;
+            margin-left: 30px;
+            margin-bottom: 1rem;
             width: fit-content;
             font-size: 5rem;
             text-shadow:
             1px 1px 0 #ffffff, 
             -1px 1px 0 #ffffff,
             1px -1px 0 #ffffff, 
-            -1px -1px 0 #ffffff; 
+            -1px -1px 0 #ffffff;
+            z-index: 1;
         }
+
         p {
-            position: absolute;
-            top: 130px;
+            position: relative;
+            margin-left: 30px;
+            margin-top: 0.5rem;
             font-weight: 300;
             background-color: rgba(0, 0, 0, 0.39);
             border: 2px solid white;
-            border-radius: 1re,;
-            left: 30px;
+            border-radius: 1rem;
             color: white;
             width: 40ch;
+            max-width: 100%;
             padding: 1rem;
+            z-index: 1;
         }
         .bg-1 {
             background-image: url('../img/bg-personajes/bg-astarion.webp');
@@ -613,7 +616,7 @@ nav.navbar {
 
 
     #section-4 {
-        height: 100vh;
+        min-height: 100vh;
         position: relative;
         z-index: 2;
         border-top: 2px solid white;
@@ -810,7 +813,7 @@ nav.navbar {
 
 #productos {
     #productos-hero {
-        height: 90vh;  
+        min-height: 90vh;  
         position: relative;
         z-index: 1;
         >div {
@@ -1038,7 +1041,7 @@ nav.navbar {
 
 #blog {
     #section-1 {
-        height: 90vh;
+         min-height: 90vh;
         position: relative;
         z-index: 1;
         >div {
@@ -1411,7 +1414,6 @@ footer {
             }
         }
         #section-2 {
-            height: 80vh;
             img {
                 max-width: 100%;
                 transform: translateX(0px);
@@ -1502,7 +1504,6 @@ footer {
 @media screen and (min-width: 480px) and (max-width: 768px) {
     #home {
         #section-2 {
-            height: 80vh;
             img {
                 max-width: 100%;
                 max-height: 500px;
@@ -1578,7 +1579,6 @@ footer {
 @media screen and (min-width: 768px) and (max-width: 1048px) {
     #home {
         #section-2 {
-            height: 80vh;
             img {
                 max-width: 100%;
                 max-height: 500px;
@@ -1647,4 +1647,9 @@ footer {
         }
 
     }
+}
+
+#section-juegos table.tabla-juegos th,
+#section-juegos table.tabla-juegos td {
+    padding: 1.2rem;
 }

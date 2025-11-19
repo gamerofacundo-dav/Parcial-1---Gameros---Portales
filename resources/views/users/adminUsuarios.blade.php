@@ -4,7 +4,7 @@
         <div class="container d-flex flex-column align-items-center">
             <h2 class="text-center">Usuarios</h2>
             
-            <div class="d-flex justify-content-center link-crear" >
+            <div class="d-flex justify-content-center link-crear">
                 {{-- <x-nav-link routeto="games.create">
                     Agregar juego
                 </x-nav-link> --}}
@@ -23,14 +23,14 @@
                     <tbody>
                         @foreach ($usuarios as $usuario)
                             <tr>
-                                <td align="center" valign="middle" class="p-4">{{ $usuario->name }}</td>
-                                <td align="center" valign="middle" class="p-4">{{ $usuario->email }}</td>
-                                <td align="center" valign="middle" class="p-4">{{ $usuario->rol }}</td>
-                                <td align="center" valign="middle" class="p-4"><a href="{{ route('users.compras', ['id' => $usuario->id]) }}">Ver compras</a></td>
-                                <td align="center" valign="middle" class="p-4">
+                                <td class="text-center p-4 align-middle">{{ $usuario->name }}</td>
+                                <td class="text-center p-4 align-middle">{{ $usuario->email }}</td>
+                                <td class="text-center p-4 align-middle">{{ $usuario->rol }}</td>
+                                <td class="text-center p-4 align-middle"><a href="{{ route('users.compras', ['id' => $usuario->id]) }}">Ver compras</a></td>
+                                <td class="text-center p-4 align-middle">
                                     <div class="d-flex gap-3">
                                         <a href="{{ route('users.edit', ['id' => $usuario->id]) }}" class="btn btn-secondary"><i class="fa-solid fa-pen-to-square"></i></a>
-                                        <a href="{{ route('games.delete', ['id' => $usuario->id]) }}" class="btn btn-secondary bg-danger"><i class="fa-solid fa-trash"></i></a>
+                                        <a href="{{ route('users.delete', ['id' => $usuario->id]) }}" class="btn btn-secondary bg-danger"><i class="fa-solid fa-trash"></i></a>
                                     </div>
                                 </td> 
                             </tr>

@@ -11,7 +11,7 @@
             <div class="d-flex flex-column-reverse flex-lg-row bg align-items-center justify-center">
                 <div>
                     <div>
-                        <img src="{{ \Storage::url($game->portada) }}">
+                        <img src="{{ \Storage::url($game->portada) }}" alt="Portada de {{ $game->titulo }}">
                     </div>
                 </div>
                 <div class="bajar d-flex flex-column align-items-center">
@@ -29,7 +29,7 @@
                         <div class="d-flex gap-4 clases justify-content-center">
                             @foreach ($game->bg_classes as $clase)
                                 <div>
-                                    <img src="/img/clases/{{ $clase->portada }}" alt="{{ $clase->nombre }}">
+                                    <img src="/img/clases/{{ $clase->portada }}" alt="Escudo de la clase: {{ $clase->nombre }}">
                                     <span>{{$clase->nombre}}</span>
                                 </div>
                             @endforeach

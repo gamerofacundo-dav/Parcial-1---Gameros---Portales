@@ -7,10 +7,11 @@
             </div>
         </div>
         <section class="container d-flex flex-column align-items-center">
+            <h2 class="visually-hidden">Listado de versiones disponibles</h2>
             @foreach ($games as $game)
                 <article>
                     <a href="{{ route('games.details', ['id' => $game->juego_id]) }}" class="d-flex align-items-center text-decoration-none text-light flex-column flex-md-row">
-                        <img src="{{ \Storage::url($game->portada) }}">
+                        <img src="{{ \Storage::url($game->portada) }}" alt="Portada de {{ $game->titulo }}">
                         <h2>{{ $game->titulo }}</h2>
                     </a>
                 </article>

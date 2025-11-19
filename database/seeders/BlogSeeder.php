@@ -56,7 +56,6 @@ class BlogSeeder extends Seeder
                                                 </div>
                                             </div>
                                         </div>
-                                        </div>
                                         </section>
                                     </div>
                     ',
@@ -296,7 +295,7 @@ class BlogSeeder extends Seeder
                                         <div class="container">
                                             <h2>Innovaciones técnicas</h2>
                                             <div class="row align-items-center my-4">
-                                                <div class="col-md-6"                                            
+                                                <div class="col-md-6">
                                                     <p>
                                                     El motor gráfico y la adaptación de <em>D&D 5e</em> permiten interacciones realistas, físicas dinámicas y combates visualmente espectaculares. 
                                                     Cada animación, iluminación y expresión facial contribuye a una inmersión total. 

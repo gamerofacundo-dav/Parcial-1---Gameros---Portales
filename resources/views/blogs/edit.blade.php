@@ -4,7 +4,7 @@
         <div class="container d-flex flex-column align-items-center">
             <h2 class="text-center">Agregar nuevo blog</h2>
             <form action=" {{ route('blogs.update', ['id' => $blog->blog_id]) }}" method="POST" class="d-flex flex-column justify-content-around p-3">
-                @csrf
+                <input type="hidden" name="_token" value="{{ csrf_token() }}">
                 <div class="d-flex flex-column">
                     <label for="titulo">Título</label>
                     <input 
@@ -47,7 +47,7 @@
                      <p class="text-danger">{{ $message }}</p>
                     @enderror
                 </div>
-                <div class="d-flex flex-column">
+                {{-- <div class="d-flex flex-column">
                     <label for="autor">Autor</label>
                     <input 
                     type="text" 
@@ -62,7 +62,10 @@
                     @error('autor')
                      <p class="text-danger">{{ $message }}</p>
                     @enderror
-                </div>
+                </div> --}}
+                <p class="mt-3">
+                    <strong>Autor:</strong> {{ $blog->autor }}
+                </p>
                 <div class="d-flex justify-content-center mt-4">
                     <input type="submit" value="Editar" class="btn btn-action px-4 me-3">
                     <a href="{{ url()->previous() }}" class="btn btn-secondary px-4">Cancelar</a>
