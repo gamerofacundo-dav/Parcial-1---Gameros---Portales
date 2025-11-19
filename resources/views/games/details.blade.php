@@ -29,7 +29,7 @@
                         <div class="d-flex gap-4 clases justify-content-center">
                             @foreach ($game->bg_classes as $clase)
                                 <div>
-                                    <img src="img/{{ $clase->imagen }}">
+                                    <img src="/img/clases/{{ $clase->portada }}" alt="{{ $clase->nombre }}">
                                     <span>{{$clase->nombre}}</span>
                                 </div>
                             @endforeach
