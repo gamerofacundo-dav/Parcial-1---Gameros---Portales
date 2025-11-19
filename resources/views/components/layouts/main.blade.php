@@ -52,7 +52,7 @@
                                 </li>
                             @endif
                             <li class="nav-item">
-                                <form action="{{ route('auth.logout') }}" method="POST">
+                                <form action="{{ route('auth.logout') }}" method="POST" novalidate>
                                     @csrf
                                     <button type="submit" class="nav-link">{{ Auth::user()->name }} (Cerrar sesión)</button>
                                 </form>
