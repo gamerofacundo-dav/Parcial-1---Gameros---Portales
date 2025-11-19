@@ -32,10 +32,6 @@ class Game extends Model
     *  @return Attribute El precio formateado.
     */
    public function precioFormateado():Attribute {
-      // return $precio = number_format($precio, 2, ',', '.');
-
-      // NOTA A FUTURO
-      // El formateo lo definimos en el GET, porque es de que manera obtenemos el precio, luego seteamos el valor tal cual lo recibimos y listo. No es al reves como yo pensaba.
       return Attribute::make(
          get: fn () => number_format($this->precio, 2, ',', '.'),
          set: fn ($value) => $value, 
@@ -44,19 +40,10 @@ class Game extends Model
 
 
    public function bg_classes(): HasMany {
-      // Defino la FK, porque sino hasMany me toma la fk como game_juego_fk, y claramente eso no existe en la BBDD. 
-      // RECORDA HACERLO SIEMPRE QUE TE PASE ESTO ASI NO ESTAS COMO UN BOLUDO FIJANDOTE
       return $this->hasMany(BgClass::class, 'juego_fk');
    }
 
    public function platforms(): BelongsToMany {
-      // Me lo dejo anotado para no ovlidarme. Profe si ves esto es proque me olvidé de borrarlo :).
-      // Param 1 -> Model de la otra tabla
-      // Param 2 -> tabla pivot
-      // Param 3 -> FK de la tabla del modelo actual
-      // Param 4 -> FK de la tabla del otro modelo.
-      // Param 5 -> como el id tiene nombre personalizado, escribnimos la PK 1
-      // Param 6 -> "" "" "" "" "" "" """ "" """ """ """", escribimos la PK 2
       return $this->belongsToMany(Platform::class, 'games_have_platforms', 'juego_fk', 'plataforma_fk', 'juego_id', 'plataforma_id');
    }
 

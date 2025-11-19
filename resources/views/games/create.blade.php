@@ -1,5 +1,5 @@
 <?php
-    // Obtenemos los errores
+    
 ?>
 
 <x-layouts.admin>

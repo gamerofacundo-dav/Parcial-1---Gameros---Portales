@@ -52,7 +52,6 @@ class GamesController extends Controller
     }
 
     public function store(Request $request) {
-      // Validamos entradas
       $request->validate([
         'titulo' => 'required|min:5|max:255',
         'fecha_lanzamiento' => 'required|before_or_equal:today|date_format:Y-m-d',
@@ -118,10 +117,8 @@ class GamesController extends Controller
     public function destroy(int $id) {
       $game = Game::findOrFail($id);
       
-      // Eliminamos relaciones many to many
       $game->platforms()->detach();
 
-      // Eliminamos relaciones one to many
       BgClass::where('juego_fk', $game->juego_id)->update([
         'juego_fk' => null
       ]);
@@ -130,10 +127,7 @@ class GamesController extends Controller
         Storage::delete($game->portada);
       }
 
-      // Eliminamos el juego
       $game->delete();
-
-      // FUNCIONA QUE EMOCION
 
       return to_route('adminJuegos')
         ->with('feedback.message', 'El juego <b>' . e($game['titulo']) . '</b> se eliminó con éxito.');
@@ -143,7 +137,6 @@ class GamesController extends Controller
     public function edit(int $id) {
       $game = Game::findOrFail($id);
       
-      // Porque necesito las que tiene relacion (las q ya estan en el juego) y las que aun no están en ningún otro juego.
       $clases = BgClass::select()
         ->where('juego_fk', null)
         ->orWhere('juego_fk', $id)
@@ -202,12 +195,10 @@ class GamesController extends Controller
 
       $game->update($data);
       
-      // Eliminamos las relaciones
       BgClass::where('juego_fk', $game->juego_id)->update([
         'juego_fk' => null
       ]);
 
-      // Construimos de vuelta las relaciones
       foreach ($request->clases as $clase) {
         BgClass::where('clase_id', $clase)->update([
           'juego_fk' => $game->juego_id

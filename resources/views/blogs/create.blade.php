@@ -1,21 +1,5 @@
 <?php
-//    $ejemploContenido =   '<div>   
-//                     <section>
-//                         <h2>[Título sección 1]</h2>
-//                         <p>[Párrafo de contenido sección 1]</p>
-//                     </section>
 
-//                     <section>
-//                         <h2>[Título sección 2]</h2>
-//                         <p>[Párrafo de contenido sección 2]</p>
-//                     </section>
-
-//                     <section>
-//                         <h2>[Título sección 3]</h2>
-//                         <img src="[imagen seccion 3]" alt="[Texto alternativo img seccion 3]">
-//                         <p>[Párrafo de contenido sección 3]</p>
-//                     </section>
-//                 </div>';
 ?>
 
 <x-layouts.admin>
@@ -67,22 +51,6 @@
                      <p class="text-danger">{{ $message }}</p>
                     @enderror
                 </div>
-                {{-- <div class="d-flex flex-column">
-                    <label for="autor">Autor</label>
-                    <input 
-                    type="text" 
-                    name="autor" 
-                    id="autor"
-                    class="a @error('autor') border-red @enderror"
-                    @error('autor')
-                    aria-invalid="true"
-                    aria-errormessage="error-autor"
-                    @enderror
-                    value="{{ old('autor') }}">
-                    @error('autor')
-                     <p class="text-danger">{{ $message }}</p>
-                    @enderror
-                </div> --}}
                 <p class="mt-3">
                     <strong>Autor:</strong> {{ Auth::user()->name }}
                 </p>
@@ -92,13 +60,5 @@
                 </div>
             </form>
         </div>
-
-        {{-- <div class="container mt-5">
-            <h2>Ejemplo de contenido</h2>
-            <span>Por favor respetar la sintaxis tal cual y reemplazar "[]"</span>
-            <pre class="bg-secondary">
-                {{ $ejemploContenido }}
-            </pre>
-        </div> --}}
     </section>
 </x-layouts.admin>

@@ -5,9 +5,6 @@
             <h2 class="text-center">Usuarios</h2>
             
             <div class="d-flex justify-content-center link-crear">
-                {{-- <x-nav-link routeto="games.create">
-                    Agregar juego
-                </x-nav-link> --}}
             </div>
             <div class="table-responsive">
                 <table>

@@ -35,7 +35,6 @@ return [
     |
     */
 
-    // El guard es una combinación de un driver y un provider. 
     'guards' => [
         'web' => [
             'driver' => 'session',
@@ -65,11 +64,6 @@ return [
             'driver' => 'eloquent',
             'model' => env('AUTH_MODEL', App\Models\User::class),
         ],
-
-        // 'users' => [
-        //     'driver' => 'database',
-        //     'table' => 'users',
-        // ],
     ],
 
     /*

@@ -2,12 +2,10 @@
 
 namespace App\Models;
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
-// No hereda de Eloquent, sino de Authenticable, que es una clase alias de User nativa de Eloquent y esa clase User, es la que hereda de Eloquent.
 class User extends Authenticatable
 {
     /** @use HasFactory<\Database\Factories\UserFactory> */

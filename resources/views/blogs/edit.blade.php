@@ -47,22 +47,6 @@
                      <p class="text-danger">{{ $message }}</p>
                     @enderror
                 </div>
-                {{-- <div class="d-flex flex-column">
-                    <label for="autor">Autor</label>
-                    <input 
-                    type="text" 
-                    name="autor" 
-                    id="autor"
-                    class="a @error('autor') border-red @enderror"
-                    @error('autor')
-                    aria-invalid="true"
-                    aria-errormessage="error-autor"
-                    @enderror
-                    value="{{ old('autor', $blog->autor) }}">
-                    @error('autor')
-                     <p class="text-danger">{{ $message }}</p>
-                    @enderror
-                </div> --}}
                 <p class="mt-3">
                     <strong>Autor:</strong> {{ $blog->autor }}
                 </p>

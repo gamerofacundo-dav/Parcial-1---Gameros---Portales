@@ -16,7 +16,6 @@ class UserController extends Controller
 
     public function compras(int $id) {
         return view('users.compras', [
-            // Gracias nico dandome una mano ahi para traer las 2 rleaciones juntas!!!!!
             'usuario' => User::with('buys.products')->findOrFail($id)
         ]);
     }

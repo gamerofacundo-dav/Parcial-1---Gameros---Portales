@@ -12,11 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('games_have_platforms', function (Blueprint $table) {
-            // Establezco clave foránea de juego, e indico a que tabla y columna me refiero.
             $table->foreignId('juego_fk')->constrained(table: 'games', column: 'juego_id');
-            // Establezco clave foránea de plataforma, e indico a que tabla y columna me refiero.
             $table->foreignId('plataforma_fk')->constrained(table: 'platforms', column: 'plataforma_id');
-            // Establezco clave primaria como combinación de ambas claves, ya que es una tabla pivot.
             $table->primary(['juego_fk', 'plataforma_fk']);
         });
     }
