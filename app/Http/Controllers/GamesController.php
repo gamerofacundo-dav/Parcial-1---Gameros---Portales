@@ -84,7 +84,7 @@ class GamesController extends Controller
       
 
       if($request->hasFile('portada')) {
-        $data['portada'] = $request->file('portada')->store('img');
+        $data['portada'] = $request->file('portada')->store('img', 'public');
       } 
      
       $game = Game::create($data);
@@ -185,7 +185,7 @@ class GamesController extends Controller
       $portadaAnterior = null;
 
       if($request->hasFile('portada')) {
-        $data['portada'] = $request->file('portada')->store('img');
+        $data['portada'] = $request->file('portada')->store('img', 'public');
         $portadaAnterior = $game->portada;
       }
 
