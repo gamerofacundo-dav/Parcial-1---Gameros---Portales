@@ -14,6 +14,12 @@ class HomeController extends Controller {
     }
 
     public function adminHome() {
-        return view('homeAdmin');
+        return view('homeAdmin', [
+            'dineroTotal' => AdminController::getDineroTotal(),
+            'cantCompras' => AdminController::getCantCompras(),
+            'cantUsuarios' => AdminController::getCantUsuarios(),
+            'ultCompras' => AdminController::getUltCompras(),
+            'mesConMasFacturacion' => AdminController::getMesConMasFacutracion()
+        ]);
     }
 }

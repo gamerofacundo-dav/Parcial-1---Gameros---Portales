@@ -38,6 +38,9 @@
                             <li class="nav-item">
                                 <x-nav-link routeto="games.all" class="text-light">Productos</x-nav-link>
                             </li>
+                            <li class="nav-item">
+                                <x-nav-link routeto="compras.carrito" class="text-light"><i class="fa-solid fa-cart-shopping"></i></x-nav-link>
+                            </li>
                             @guest
                             <li class="nav-item">
                                 <x-nav-link routeto="auth.login.show">Iniciar seisón</x-nav-link>
@@ -51,12 +54,24 @@
                                     <x-nav-link routeto="homeAdmin">Panel de admin</x-nav-link>
                                 </li>
                             @endif
-                            <li class="nav-item">
-                                <form action="{{ route('auth.logout') }}" method="POST" novalidate>
-                                    @csrf
-                                    <button type="submit" class="nav-link">{{ Auth::user()->name }} (Cerrar sesión)</button>
-                                </form>
-                            </li>
+                            <div class="dropdown ms-2">
+                                <button class="btn-action border-0 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    {{ Auth::user()->name }}
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <x-nav-link class="dropdown-item" routeto="users.perfil">Mi perfil</x-nav-link>
+                                    </li>
+                                    <li>
+                                        <form action="{{ route('auth.logout') }}" method="POST">
+                                            @csrf
+                                            <button type="submit" class="nav-link">Cerrar sesión <i class="fa-solid fa-arrow-right-from-bracket"></i></button>
+                                        </form>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                           
                             @endguest
                         </ul>
                     </div>

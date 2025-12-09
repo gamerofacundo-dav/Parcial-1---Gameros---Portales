@@ -153,3 +153,45 @@ Route::post('/admin/adminUsuarios/{id}/editar',[\App\Http\Controllers\UserContro
     ->name('users.update')
     ->middleware('auth')
     ->middleware(CheckUserRole::class);
+
+
+// PERFIL USUARIO
+
+Route::get('/perfil', [\App\Http\Controllers\UserController::class, 'perfil'])
+    ->name('users.perfil')
+    ->middleware('auth');
+
+Route::get('/perfil/editar-nombre', [\App\Http\Controllers\UserController::class, 'editName'])
+    ->name('users.editName')
+    ->middleware('auth');
+
+Route::post('/perfil/editar-nombre', [\App\Http\Controllers\UserController::class, 'updateName'])
+    ->name('users.updateName')
+    ->middleware('auth');
+
+Route::get('/perfil/editar-avatar', [\App\Http\Controllers\UserController::class, 'editAvatar'])
+    ->name('users.editAvatar')
+    ->middleware('auth');
+
+Route::post('/perfil/editar-avatar', [\App\Http\Controllers\UserController::class, 'updateAvatar'])
+    ->name('users.updateAvatar')
+    ->middleware('auth');
+
+Route::get('/perfil/editar-informacion', [\App\Http\Controllers\UserController::class, 'editInformacion'])
+    ->name('users.editInformacion')
+    ->middleware('auth');
+
+Route::post('/perfil/editar-informacion', [\App\Http\Controllers\UserController::class, 'updateInformacion'])
+    ->name('users.updateInformacion')
+    ->middleware('auth');
+
+
+// CARRITO
+
+Route::get('/carrito', [\App\Http\Controllers\CarritoController::class, 'carrito'])
+    ->name('compras.carrito')
+    ->middleware('auth');
+
+Route::post('/carrito/{id}/agregar', [\App\Http\Controllers\CarritoController::class, 'agregarAlCarrito'])
+    ->name('compras.agregarAlCarrito')
+    ->middleware('auth');

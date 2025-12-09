@@ -29,5 +29,39 @@
                 </div>
             </div>
         </section>
+        <section id="section-dashboard" class="container mt-5">
+            <div class="line d-flex justify-content-between">
+                <h2 class="mb-0">Dashboard</h2>
+                <i class="fa-solid fa-chart-simple fs-2"></i>
+            </div>
+            <div class="stats d-flex justify-content-between flex-wrap gap-3">
+                <div class="d-flex flex-column justify-content-center align-items-center">
+                    <h3 class="fs-4 text-center">Dinero total</h3>
+                    <span class="fs-2">${{ $dineroTotal }}</span>
+                </div>
+                <div class="d-flex flex-column justify-content-center align-items-center">
+                    <h3 class="fs-4 text-center">Cantidad de compras</h3>
+                    <span class="fs-2">{{ $cantCompras }}</span>
+                </div>
+                <div class="d-flex flex-column justify-content-center align-items-center">
+                    <h3 class="fs-4 text-center"> Cantidad de usuarios</h3>
+                    <span class="fs-2">{{ $cantUsuarios }}</span>
+                </div>
+                <div class="d-flex flex-column justify-content-center align-items-center">
+                    <h3 class="fs-4 text-center">Ultimas compras</h3>
+                    <ul class="list-unstyled">
+                        @foreach ($ultCompras as $ultCompra)
+                            @foreach ($ultCompra->products as $product)
+                                <li>{{ $product->titulo }} - {{$ultCompra->user->name}}</li>
+                            @endforeach
+                        @endforeach
+                    </ul>
+                </div>
+                <div class="d-flex flex-column justify-content-center align-items-center">
+                    <h3 class="fs-4 text-center">Mes con más facturación <span class="fw-bold fs-3">2025-{{ $mesConMasFacturacion[0] }}</span></h3>
+                    <span class="fs-2">${{ $mesConMasFacturacion[1] }}</span>
+                </div>
+            </div>
+        </section>
     </div>
 </x-layouts.admin>

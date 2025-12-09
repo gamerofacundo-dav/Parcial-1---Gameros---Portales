@@ -20,6 +20,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        
     ];
 
     /**
@@ -48,5 +49,9 @@ class User extends Authenticatable
 
     public function buys() {
         return $this->hasMany(Buy::class, 'usuario_fk');
+    }
+
+    public function profile() {
+        return $this->hasOne(Profile::class, 'usuario_fk');
     }
 }

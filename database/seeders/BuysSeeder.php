@@ -17,12 +17,16 @@ class BuysSeeder extends Seeder
             [
                 'compra_id' => 1,
                 'usuario_fk' => 1,
-                'estado' => 'Pendiente'
-            ],
+                'estado' => 'Pendiente',
+                'created_at' => now(),
+                'updated_at' => now(),
+            ], 
             [
                 'compra_id' => 2,
                 'usuario_fk' => 2,
-                'estado' => 'Pendiente'
+                'estado' => 'Pendiente',
+                'created_at' => now(),
+                'updated_at' => now(),
             ],
         ]);
     }

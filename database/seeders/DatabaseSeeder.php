@@ -20,7 +20,8 @@ class DatabaseSeeder extends Seeder
             GameHasPlatformSeeder::class,
             ClassSeeder::class,
             BuysSeeder::class,
-            BuyHasProduct::class
+            BuyHasProduct::class,
+            ProfileSeeder::class
         ]);
     }
 }

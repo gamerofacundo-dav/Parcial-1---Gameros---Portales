@@ -11,4 +11,8 @@ class Buy extends Model
     public function products() {
         return $this->belongsToMany(Game::class, 'buy_have_products', 'compra_fk', 'juego_fk', 'compra_id');
     }
+
+    public function user() {
+        return $this->hasOne(User::class, 'id');
+    }
 }

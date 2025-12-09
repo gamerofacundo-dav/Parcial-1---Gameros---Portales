@@ -36,7 +36,14 @@
                         </div>
                         <div class="precio d-flex align-items-center gap-3">
                             <span>${{ $game->precioFormateado }}</span>
-                            <a href="#" class="btn-action">Comprar</a>
+                            @if(!in_array($game->juego_id, $carrito))
+                                <form action="{{ route('compras.agregarAlCarrito', ['id' => $game->juego_id]) }}" method="POST">
+                                    @csrf
+                                    <button type="submit" class="btn-action">Comprar</button>
+                                </form>
+                            @else 
+                                <a href="{{ route('compras.carrito') }}" class="disabled">Ver en carrito</a>
+                            @endif
                         </div>
                     </div>
                     

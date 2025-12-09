@@ -6,6 +6,7 @@ use App\Models\BgClass;
 use App\Models\Game;
 use App\Models\Platform;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 
 class GamesController extends Controller
@@ -28,7 +29,8 @@ class GamesController extends Controller
       $game = Game::with('bg_classes', 'platforms')->findOrFail($id);
 
       return view('games.details', [
-        'game' => $game
+        'game' => $game,
+        'carrito' => session()->get('carrito', [])
       ]);
     }
 
@@ -77,33 +79,36 @@ class GamesController extends Controller
         
       ]);
 
+      try {
+        $data = $request->only('titulo', 'fecha_lanzamiento', 'descripcion', 'precio', 'portada');
+
+        if($request->hasFile('portada')) {
+          $data['portada'] = $request->file('portada')->store('img', 'public');
+        } 
       
+        DB::transaction(function() use ($data, $request) {
+          $game = Game::create($data);
 
-      $data = $request->only('titulo', 'fecha_lanzamiento', 'descripcion', 'precio', 'portada');
+          $game->platforms()->attach($request->input('plataformas', []));
 
-      
+          if($request->clases) {
+              foreach($request->clases as $clase) {
+              $classParaUpdatear = BgClass::findOrFail($clase);
+              $classParaUpdatear->update([
+                'juego_fk' => $game->juego_id
+              ]);
+            }
+          }
+        });
 
-      if($request->hasFile('portada')) {
-        $data['portada'] = $request->file('portada')->store('img', 'public');
-      } 
-     
-      $game = Game::create($data);
-
-      $game->platforms()->attach($request->input('plataformas', []));
-
-      if($request->clases) {
-        foreach($request->clases as $clase) {
-        $classParaUpdatear = BgClass::findOrFail($clase);
-        $classParaUpdatear->update([
-          'juego_fk' => $game->juego_id
-        ]);
+        return to_route('adminJuegos')
+          ->with('feedback.message', 'El juego <b>' . e($data['titulo']) . '</b> se creó con éxito.');
+      } catch(\Throwable $th) {
+        throw $th;
+        return to_route('games.create')
+            ->withInput()
+            ->with('feedback.message', 'Ocurrió un error inesperado. No se puedo crear la película.');
       }
-      }
-      
-
-      return to_route('adminJuegos')
-        ->with('feedback.message', 'El juego <b>' . e($data['titulo']) . '</b> se creó con éxito.'); 
-
     }
 
     public function delete(int $id) {

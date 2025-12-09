@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Profile;
 use App\Models\User;
 use Illuminate\Support\Facades\Auth;
 
@@ -87,7 +88,16 @@ class AuthController extends Controller
 
         $data = $request->only(['name', 'email', 'password']);
 
+        
         $user = User::create($data);
+        $dataParaPerfil = [
+            'usuario_fk' => $user->id,
+            'avatar' => null,
+            'direccion' => null,
+            'created_at' => now(),
+            'updated_at' => now()
+        ];
+        Profile::create($dataParaPerfil);
 
         Auth::login($user);
 

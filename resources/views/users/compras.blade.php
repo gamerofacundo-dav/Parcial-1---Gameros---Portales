@@ -26,6 +26,7 @@
                             <td align="center" valign="middle" class="p-4">
                                 @foreach ($compra->products as $producto)
                                     <span class="d-block">- {{ $producto->titulo }}</span>
+                                    <span> ${{ $producto->precio }}</span>
                                 @endforeach
                             </td>
                             <td align="center" valign="middle" class="p-4">
